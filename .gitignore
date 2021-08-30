@@ -1,0 +1,16 @@
+# Unity cache directories
+Temp/
+Library/
+.vs/
+obj/
+
+Builds/
+
+# Unity/MonoDevelop generated 
+*.userprefs
+/*.csproj
+/*.sln
+*.user
+*.unityproj
+*.bin
+*.cache
