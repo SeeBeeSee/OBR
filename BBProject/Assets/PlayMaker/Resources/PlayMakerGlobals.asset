@@ -16,7 +16,13 @@ MonoBehaviour:
     floatVariables: []
     intVariables: []
     boolVariables: []
-    stringVariables: []
+    stringVariables:
+    - useVariable: 1
+      name: level
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 
     vector2Variables: []
     vector3Variables: []
     colorVariables: []
@@ -30,6 +36,8 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 00000000
+    variableCategoryIDs: 000000000000000000000000
   events:
   - dashEvent
+  - SongSelect
+  - LoadLevel
