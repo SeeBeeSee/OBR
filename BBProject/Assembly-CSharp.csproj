@@ -1087,6 +1087,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderOnValueChangedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
+    <Compile Include="Assets\Scripts\Audio\MasterAudioMixer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Readme.txt" />
