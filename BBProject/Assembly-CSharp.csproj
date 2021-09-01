@@ -185,6 +185,7 @@
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetSendFrameReadyEvents.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\SetAnimatorPlaybackTime.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Audio\SetAudioClip.cs" />
+    <Compile Include="Assets\Scripts\Audio\MasterAudioMixer.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\GetSceneIsDirty.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderSetWholeNumbers.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UnityObject\GetComponent.cs" />
@@ -1087,7 +1088,35 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderOnValueChangedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
-    <Compile Include="Assets\Scripts\Audio\MasterAudioMixer.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenScaleFrom.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenLookUpdate.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenMoveAdd.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenRotateFrom.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenScaleAdd.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenShakeRotation.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenPause.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenShakePosition.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenRotateTo.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenLookFrom.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenMoveTo.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenFsmAction.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenPunchRotation.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenRotateAdd.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenScaleTo.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenMoveFrom.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenScaleBy.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenShakeScale.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenMoveBy.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenMoveUpdate.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenPunchScale.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\Include\iTweenFSMEvents.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenScaleUpdate.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenResume.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenRotateUpdate.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenPunchPosition.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenLookTo.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenRotateBy.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Readme.txt" />
@@ -1670,6 +1699,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{EBA22EBD-B760-AB0A-9D0D-702BBB2505FD}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
