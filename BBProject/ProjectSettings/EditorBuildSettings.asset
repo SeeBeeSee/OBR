@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/movementWork.unity
     guid: cbc2fe0613623d94881335d2e50ce510
+  - enabled: 1
+    path: Assets/Scenes/pauseMenuWork.unity
+    guid: 8de96f87b73eb13489f4e6cb0741c803
   m_configObjects: {}

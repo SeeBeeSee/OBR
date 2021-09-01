@@ -41,3 +41,6 @@ MonoBehaviour:
   - dashEvent
   - SongSelect
   - LoadLevel
+  - RestartLevel
+  - pause
+  - restartFade
