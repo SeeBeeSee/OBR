@@ -125,6 +125,7 @@
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerUpgradeGuide.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmTemplateWindow.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmErrorWindow.cs" />
+    <Compile Include="Assets\PlayMaker\Actions\iTween\Editor\iTweenMoveToActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentTransitionInfoIsNameActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Editor\CallMethodEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmEditorWindow.cs" />
@@ -177,7 +178,6 @@
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerWelcomeWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIsMatchingTargetActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\Editor\SetVelocity2dEditor.cs" />
-    <Compile Include="Assets\PlayMaker\Actions\iTween\Editor\iTweenMoveToActionEditor.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Editor\Install\Resources\CheckActions.txt" />

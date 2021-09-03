@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: test-attack-straight-static
+  m_EditorClassIdentifier: 
+  mEventID: test-attack-straight-static
+  mEventList:
+  - mStartSample: 244466
+    mEndSample: 244466
+  - mStartSample: 252026
+    mEndSample: 252026
+  - mStartSample: 259586
+    mEndSample: 259586
+  - mStartSample: 267146
+    mEndSample: 267146
+  - mStartSample: 274706
+    mEndSample: 274706
+  - mStartSample: 282266
+    mEndSample: 282266
+  - mStartSample: 289826
+    mEndSample: 289826
+  - mStartSample: 297386
+    mEndSample: 297386
+  - mStartSample: 304946
+    mEndSample: 304946
+  - mStartSample: 312506
+    mEndSample: 312506
+  - mStartSample: 320066
+    mEndSample: 320066
+  - mStartSample: 327626
+    mEndSample: 327626
+  - mStartSample: 335186
+    mEndSample: 335186
+  - mStartSample: 342746
+    mEndSample: 342746
+  - mStartSample: 350306
+    mEndSample: 350306
+  - mStartSample: 357866
+    mEndSample: 357866
+  - mStartSample: 365426
+    mEndSample: 365426
+  - mStartSample: 372986
+    mEndSample: 372986
+  - mStartSample: 380546
+    mEndSample: 380546
+  - mStartSample: 388106
+    mEndSample: 388106
+  - mStartSample: 395666
+    mEndSample: 395666
+  - mStartSample: 403226
+    mEndSample: 403226
+  - mStartSample: 410786
+    mEndSample: 410786
+  - mStartSample: 418346
+    mEndSample: 418346
+  - mStartSample: 425906
+    mEndSample: 425906
+  - mStartSample: 433466
+    mEndSample: 433466
+  - mStartSample: 441026
+    mEndSample: 441026
+  - mStartSample: 448586
+    mEndSample: 448586
+  - mStartSample: 456146
+    mEndSample: 456146
+  - mStartSample: 463706
+    mEndSample: 463706
+  - mStartSample: 471266
+    mEndSample: 471266
+  - mStartSample: 486386
+    mEndSample: 486386
+  - mStartSample: 493946
+    mEndSample: 493946
+  - mStartSample: 501506
+    mEndSample: 501506
+  - mStartSample: 509066
+    mEndSample: 509066
+  - mStartSample: 516626
+    mEndSample: 516626
+  - mStartSample: 524186
+    mEndSample: 524186
+  - mStartSample: 531746
+    mEndSample: 531746
+  - mStartSample: 539306
+    mEndSample: 539306
+  - mStartSample: 546866
+    mEndSample: 546866
+  - mStartSample: 554426
+    mEndSample: 554426
+  - mStartSample: 561986
+    mEndSample: 561986
+  - mStartSample: 569546
+    mEndSample: 569546
+  - mStartSample: 577106
+    mEndSample: 577106
+  - mStartSample: 584666
+    mEndSample: 584666
+  - mStartSample: 592226
+    mEndSample: 592226
+  - mStartSample: 599786
+    mEndSample: 599786
+  - mStartSample: 607346
+    mEndSample: 607346
+  - mStartSample: 614906
+    mEndSample: 614906
+  - mStartSample: 622466
+    mEndSample: 622466
+  - mStartSample: 630026
+    mEndSample: 630026
+  - mStartSample: 637586
+    mEndSample: 637586
+  - mStartSample: 645146
+    mEndSample: 645146
+  - mStartSample: 652706
+    mEndSample: 652706
+  - mStartSample: 660266
+    mEndSample: 660266
+  - mStartSample: 667826
+    mEndSample: 667826
+  - mStartSample: 675386
+    mEndSample: 675386
+  - mStartSample: 682946
+    mEndSample: 682946
+  - mStartSample: 690506
+    mEndSample: 690506
+  - mStartSample: 698066
+    mEndSample: 698066
+  - mStartSample: 705626
+    mEndSample: 705626
+  _SerializedPayloadTypes: []
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads: []
+  _TextPayloadIdxs: 

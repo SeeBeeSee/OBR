@@ -9,22 +9,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: test-attack
   m_EditorClassIdentifier: 
-  mSourceClip: {fileID: 8300000, guid: fb68e5ae3496a7d43a2c930b0a9b58c2, type: 3}
-  mAudioFilePath: 
-  mSampleRate: 44100
-  mIgnoreLatencyOffset: 0
-  mTempoSections:
-  - sectionName: New Section
-    startSample: 0
-    samplesPerBeat: 22050
-    beatsPerMeasure: 4
-    bStartNewMeasure: 1
-  - sectionName: New Section
-    startSample: 0
-    samplesPerBeat: 22050
-    beatsPerMeasure: 4
-    bStartNewMeasure: 1
-  mTracks: []
+  mEventID: BulletAttackInit
+  mEventList:
+  - mStartSample: 244466
+    mEndSample: 244466
+  - mStartSample: 365426
+    mEndSample: 365426
+  - mStartSample: 486386
+    mEndSample: 486386
+  - mStartSample: 607346
+    mEndSample: 607346
+  _SerializedPayloadTypes:
+  - SonicBloom.Koreo.TextPayload
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads:
+  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
+  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
+  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
+  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
+  _TextPayloadIdxs: 00000000010000000200000003000000
