@@ -27,7 +27,7 @@ public class BulletAttack : MonoBehaviour
         {
             var eventText = (e.Payload as TextPayload).TextVal;
             //fsm.SendEvent(eventText);
-            Debug.Log(eventText);
+            //Debug.Log(eventText);
             ParseBulletAttackPayload(eventText);
         }
         else

@@ -45,7 +45,7 @@ public class BulletPoolManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No more SimpleBullets available, must add more.");
+            //Debug.Log("No more SimpleBullets available, must add more.");
             var newBullet = Instantiate(simpleBulletPrefab);
             activeSimpleBullets.Add(newBullet);
             return newBullet;

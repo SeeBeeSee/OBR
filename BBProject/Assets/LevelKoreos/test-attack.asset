@@ -39,8 +39,8 @@ MonoBehaviour:
   _SpectrumPayloads: []
   _SpectrumPayloadIdxs: 
   _TextPayloads:
-  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
-  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
-  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
-  - mTextVal: SingleStraight#Static#5,5#-5,-5#90#.25#2.25
+  - mTextVal: SingleStraight#Static#15,15#-15,-15#90#.25#2.25
+  - mTextVal: SingleStraight#Static#15,15#-15,-15#90#.25#2.25
+  - mTextVal: SingleStraight#Static#15,15#-15,-15#90#.25#2.25
+  - mTextVal: SingleStraight#Static#15,15#-15,-15#90#.25#2.25
   _TextPayloadIdxs: 00000000010000000200000003000000
