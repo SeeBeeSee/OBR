@@ -293,6 +293,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Logic\IntChanged.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformGetAnchorMax.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiImageSetRaycastTarget.cs" />
+    <Compile Include="Assets\Scripts\Attacks\BulletPoolManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\SetDrag.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Lights\SetLightSpotAngle.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\SetMass.cs" />
@@ -598,6 +599,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetNext.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\GameObjectIsVisibleToCamera.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUI\GUIAction.cs" />
+    <Compile Include="Assets\Scripts\Attacks\SimpleBullet.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUI\GUIBox.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Selectable\UiTransitionGetType.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayInsert.cs" />
@@ -1119,8 +1121,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderOnValueChangedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
-    <Compile Include="Assets\Scripts\Attacks\BulletPoolManager.cs" />
-    <Compile Include="Assets\Scripts\Attacks\SimpleBullet.cs" />
+    <Compile Include="Assets\Scripts\Attacks\NBulletSpawnPattern.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Readme.txt" />
