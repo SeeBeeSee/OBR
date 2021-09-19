@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: d0e11a25d6af40b4abc127ff6dde3c48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Old/movementWork.unity
     guid: cbc2fe0613623d94881335d2e50ce510
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Old/pauseMenuWork.unity
     guid: 8de96f87b73eb13489f4e6cb0741c803
+  - enabled: 1
+    path: Assets/Scenes/gridAndMouse.unity
+    guid: 7cebcca3b31b5064799f51a687b8e422
   m_configObjects: {}
