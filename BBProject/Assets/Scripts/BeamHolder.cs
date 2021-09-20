@@ -14,6 +14,9 @@ public class BeamHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+
         beams = new GameObject[spawnCount];
 
         for (int i=0; i<spawnCount; i++)
