@@ -52,3 +52,5 @@ MonoBehaviour:
   - restartFade
   - fire
   - FIRE
+  - BLOCK
+  - HIT
