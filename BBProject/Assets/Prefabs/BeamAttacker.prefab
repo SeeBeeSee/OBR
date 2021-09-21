@@ -612,37 +612,37 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {r: 1, g: 0.6135799, b: 0.1745283, a: 1}
+          value: {r: 0.45882353, g: 0.6745098, b: 1, a: 1}
         - useVariable: 1
           name: cannonBaseColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {r: 1, g: 0.6135799, b: 0.1745283, a: 1}
+          value: {r: 0.45882353, g: 0.6745098, b: 1, a: 1}
         - useVariable: 1
           name: cannonBaseColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {r: 1, g: 0.6135799, b: 0.1745283, a: 1}
+          value: {r: 0.45882353, g: 0.6745098, b: 1, a: 1}
         - useVariable: 1
           name: cannonBeamBaseColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {r: 1, g: 0, b: 0, a: 1}
+          value: {r: 0.77254903, g: 0.18431373, b: 0.99607843, a: 1}
         - useVariable: 1
           name: cannonBeamEmissionColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {r: 0.049241543, g: 1, b: 0, a: 1}
+          value: {r: 0.2784314, g: 0.015686275, b: 0.49411765, a: 1}
         - useVariable: 1
           name: cannonLightColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {r: 0, g: 0.9477272, b: 1, a: 1}
+          value: {r: 0.5058824, g: 0, b: 1, a: 1}
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
@@ -837,7 +837,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 100
+          value: 10
         - useVariable: 1
           name: 
           tooltip: 
@@ -922,7 +922,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -1010,7 +1010,7 @@ MonoBehaviour:
         stringParams:
         - 
         - FINISHED
-        byteData: 00000100000000000000010000000000000000000000000000000000000000
+        byteData: 00000100000000000000000000000000000000000000000000000000000000
         arrayParamSizes: 00000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmInt
@@ -1102,14 +1102,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.TweenFloat
         - HutongGames.PlayMaker.Actions.SetLightIntensity
         - HutongGames.PlayMaker.Actions.TweenFade
+        - HutongGames.PlayMaker.Actions.DebugLog
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000f00000012000000
-        actionHashCodes: 81bfb30432d5940273d1f003
+        - 
+        actionEnabled: 01010100
+        actionIsOpen: 00000001
+        actionStartIndex: 000000000f000000120000001f000000
+        actionHashCodes: 81bfb30432d5940273d1f0039c59e501
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1147,7 +1149,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DONE
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1243,12 +1251,12 @@ MonoBehaviour:
         stringParams:
         - 
         - FINISHED
-        byteData: 020000000200000000000000000000000000000000010000000000000000000000000000000000
+        byteData: 0200000002000000000000000000000000000000000100000000000000000000000000000000000000000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f000000070000000f000000070000000f0000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000140000000f0000000100000014000000070000000f0000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000
+        paramDataType: 0f000000070000000f000000070000000f0000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000140000000f0000000100000014000000070000000f0000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000070000001200000001000000
         paramName:
         - variable
         - fromOption
@@ -1281,8 +1289,11 @@ MonoBehaviour:
         - normalizedTime
         - everyFrame
         - updateType
-        paramDataPos: 0000000000000000010000000400000002000000030000000000000000000000040000000000000008000000000000000c000000100000001100000000000000050000001500000001000000160000000600000007000000010000000100000008000000010000001a000000010000001e0000002200000023000000
-        paramByteDataSize: 00000000040000000000000004000000000000000000000000000000000000000000000000000000040000000000000004000000010000000400000000000000000000000100000000000000040000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000
+        - logLevel
+        - text
+        - sendToUnityLog
+        paramDataPos: 0000000000000000010000000400000002000000030000000000000000000000040000000000000008000000000000000c000000100000001100000000000000050000001500000001000000160000000600000007000000010000000100000008000000010000001a000000010000001e000000220000002300000027000000000000002b000000
+        paramByteDataSize: 00000000040000000000000004000000000000000000000000000000000000000000000000000000040000000000000004000000010000000400000000000000000000000100000000000000040000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000040000000000000001000000
     - name: Fire Begin
       description: Animation/setup before firing.
       colorIndex: 0
@@ -1549,12 +1560,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.DestroySelf
+        - HutongGames.PlayMaker.Actions.DeactivateSelf
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 230cc800
+        - 
+        actionEnabled: 0001
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 230cc80003da1f00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1576,8 +1589,20 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -1601,13 +1626,15 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000001100000011000000
+        paramDataType: 0f00000011000000110000000f00000011000000
         paramName:
         - delay
         - realTime
         - detachChildren
-        paramDataPos: 000000000000000001000000
-        paramByteDataSize: 000000000000000000000000
+        - delay
+        - realTime
+        paramDataPos: 0000000000000000010000000100000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000
     - name: DetectHitBlock
       description: Update's player score whether beam hit them or their shield.
       colorIndex: 0
@@ -1643,13 +1670,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GameObjectCompareTag
         - HutongGames.PlayMaker.Actions.DebugGameObject
+        - HutongGames.PlayMaker.Actions.DebugLog
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 7b31260268df9503
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000600000009000000
+        actionHashCodes: 7b31260268df95039c59e501
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1678,6 +1707,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: Shield
+        - useVariable: 1
+          name: FireHit
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1699,12 +1734,12 @@ MonoBehaviour:
         stringParams:
         - HIT
         - BLOCK
-        byteData: 000000000001
+        byteData: 0001000000010000000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 130000001200000017000000170000001100000001000000070000001300000001000000
+        paramDataType: 130000001200000017000000170000001100000001000000070000001300000001000000070000001200000001000000
         paramName:
         - gameObject
         - tag
@@ -1715,8 +1750,11 @@ MonoBehaviour:
         - logLevel
         - gameObject
         - sendToUnityLog
-        paramDataPos: 000000000000000000000000010000000000000000000000010000000100000005000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000040000000000000001000000
+        - logLevel
+        - text
+        - sendToUnityLog
+        paramDataPos: 00000000000000000000000001000000000000000000000001000000010000000500000006000000010000000a000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000040000000000000001000000040000000000000001000000
     - name: FireBlockEvent
       description: 
       colorIndex: 0
@@ -1742,12 +1780,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
+        - HutongGames.PlayMaker.Actions.DebugLog
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 5e69bb04
+        - 
+        actionEnabled: 0100
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: 5e69bb049c59e501
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1789,7 +1829,13 @@ MonoBehaviour:
           fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: BLOCK
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1810,19 +1856,22 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - BLOCK
-        byteData: 00
+        byteData: 000000000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000170000000f00000001000000
+        paramDataType: 1f000000170000000f00000001000000070000001200000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        - logLevel
+        - text
+        - sendToUnityLog
+        paramDataPos: 00000000000000000000000000000000010000000000000005000000
+        paramByteDataSize: 00000000000000000000000001000000040000000000000001000000
     - name: FireHitEvent
       description: 
       colorIndex: 0
@@ -1848,12 +1897,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
+        - HutongGames.PlayMaker.Actions.DebugLog
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 5e69bb04
+        - 
+        actionEnabled: 0100
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: 5e69bb049c59e501
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1895,7 +1946,13 @@ MonoBehaviour:
           fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: HIT
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1916,19 +1973,22 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - HIT
-        byteData: 00
+        byteData: 000000000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000170000000f00000001000000
+        paramDataType: 1f000000170000000f00000001000000070000001200000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        - logLevel
+        - text
+        - sendToUnityLog
+        paramDataPos: 00000000000000000000000000000000010000000000000005000000
+        paramByteDataSize: 00000000000000000000000001000000040000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1

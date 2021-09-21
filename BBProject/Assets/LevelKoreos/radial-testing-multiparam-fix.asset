@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
-  m_Name: radial-testing-multiparam
+  m_Name: radial-testing-multiparam-fix
   m_EditorClassIdentifier: 
   mSourceClip: {fileID: 8300000, guid: 6d69ca4dc83051d4e89fbf538b61099b, type: 3}
   mAudioFilePath: 
   mSampleRate: 44100
-  mIgnoreLatencyOffset: 1
+  mIgnoreLatencyOffset: 0
   mTempoSections:
   - sectionName: intro
     startSample: 0
