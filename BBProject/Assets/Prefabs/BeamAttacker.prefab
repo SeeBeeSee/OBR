@@ -2019,25 +2019,25 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 1, g: 0.6135799, b: 0.1745283, a: 1}
+        value: {r: 0.45882353, g: 0.6745098, b: 1, a: 1}
       - useVariable: 1
         name: cannonLightColor
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 0, g: 0.9477272, b: 1, a: 1}
+        value: {r: 0.5058824, g: 0, b: 1, a: 1}
       - useVariable: 1
         name: cannonBeamBaseColor
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 1, g: 0, b: 0, a: 1}
+        value: {r: 0.77254903, g: 0.18431373, b: 0.99607843, a: 1}
       - useVariable: 1
         name: cannonBeamEmissionColor
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 0.049241543, g: 1, b: 0, a: 1}
+        value: {r: 0.2784314, g: 0.015686275, b: 0.49411765, a: 1}
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables:
@@ -2065,7 +2065,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
