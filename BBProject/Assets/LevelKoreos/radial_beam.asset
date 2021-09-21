@@ -853,68 +853,26 @@ MonoBehaviour:
   - mTextVal: O,14,255-219-16,47-252-254,4-126-109,0-255-170
   - mTextVal: O,15,255-219-16,47-252-254,4-126-109,0-255-170
   - mTextVal: O,16,255-219-16,47-252-254,4-126-109,0-255-170
-  - mTextVal: 15
-  - mTextVal: 3
-  - mTextVal: 11
-  - mTextVal: 8
-  - mTextVal: 7
-  - mTextVal: 1
-  - mTextVal: 9
-  - mTextVal: 5
-  - mTextVal: 12
-  - mTextVal: 13
-  - mTextVal: 15
-  - mTextVal: 3
-  - mTextVal: 11
-  - mTextVal: 8
-  - mTextVal: 7
-  - mTextVal: 1
-  - mTextVal: 9
-  - mTextVal: 5
-  - mTextVal: 12
-  - mTextVal: 13
-  - mTextVal: 9
-  - mTextVal: 5
-  - mTextVal: 3
-  - mTextVal: 1
-  - mTextVal: 2
-  - mTextVal: 9
-  - mTextVal: 5
-  - mTextVal: 3
-  - mTextVal: 1
-  - mTextVal: 2
-  - mTextVal: 4
-  - mTextVal: 7
-  - mTextVal: 9
-  - mTextVal: 13
-  - mTextVal: 15
-  - mTextVal: 1
-  - mTextVal: 16
-  - mTextVal: 13
-  - mTextVal: 1
-  - mTextVal: 14
-  - mTextVal: 12
-  - mTextVal: 9
-  - mTextVal: 13
-  - mTextVal: 15
-  - mTextVal: 1
-  - mTextVal: 16
-  - mTextVal: 9
-  - mTextVal: 13
-  - mTextVal: 15
-  - mTextVal: 1
-  - mTextVal: 16
-  - mTextVal: 14
-  - mTextVal: 12
-  - mTextVal: 9
-  - mTextVal: 5
-  - mTextVal: 3
-  - mTextVal: 1
-  - mTextVal: 15
-  - mTextVal: 3
-  - mTextVal: 16
-  - mTextVal: 2
-  - mTextVal: 1
+  - mTextVal: O,15,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,3,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,11,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,8,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,7,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,1,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,9,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,5,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,12,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,13,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,15,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,3,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,11,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,8,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,7,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,1,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,9,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,5,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,12,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,13,255-119-118,254-49-47,126-10-4,255-0-10
   - mTextVal: 9
   - mTextVal: 5
   - mTextVal: 3
@@ -957,37 +915,79 @@ MonoBehaviour:
   - mTextVal: 16
   - mTextVal: 2
   - mTextVal: 1
-  - mTextVal: 15
-  - mTextVal: 3
-  - mTextVal: 11
-  - mTextVal: 8
-  - mTextVal: 7
-  - mTextVal: 1
   - mTextVal: 9
   - mTextVal: 5
-  - mTextVal: 12
-  - mTextVal: 13
-  - mTextVal: 15
   - mTextVal: 3
-  - mTextVal: 11
-  - mTextVal: 8
-  - mTextVal: 7
   - mTextVal: 1
+  - mTextVal: 2
   - mTextVal: 9
   - mTextVal: 5
-  - mTextVal: 12
+  - mTextVal: 3
+  - mTextVal: 1
+  - mTextVal: 2
+  - mTextVal: 4
+  - mTextVal: 7
+  - mTextVal: 9
   - mTextVal: 13
   - mTextVal: 15
   - mTextVal: 1
-  - mTextVal: 3
-  - mTextVal: 5
-  - mTextVal: 7
+  - mTextVal: 16
+  - mTextVal: 13
+  - mTextVal: 1
+  - mTextVal: 14
+  - mTextVal: 12
   - mTextVal: 9
+  - mTextVal: 13
+  - mTextVal: 15
+  - mTextVal: 1
+  - mTextVal: 16
+  - mTextVal: 9
+  - mTextVal: 13
+  - mTextVal: 15
+  - mTextVal: 1
+  - mTextVal: 16
+  - mTextVal: 14
+  - mTextVal: 12
+  - mTextVal: 9
+  - mTextVal: 5
+  - mTextVal: 3
+  - mTextVal: 1
   - mTextVal: 15
   - mTextVal: 3
-  - mTextVal: 11
-  - mTextVal: 8
-  - mTextVal: 7
+  - mTextVal: 16
+  - mTextVal: 2
+  - mTextVal: 1
+  - mTextVal: O,15,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,3,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,11,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,8,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,7,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,1,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,9,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,5,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,12,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,13,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,15,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,3,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,11,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,8,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,7,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,1,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,9,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,5,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,12,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,13,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,15,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,1,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,3,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,5,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,7,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,9,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,15,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,3,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,11,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,8,255-119-118,254-49-47,126-10-4,255-0-10
+  - mTextVal: O,7,255-119-118,254-49-47,126-10-4,255-0-10
   - mTextVal: 9
   - mTextVal: 5
   - mTextVal: 3
