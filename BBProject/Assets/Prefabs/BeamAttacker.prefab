@@ -1326,7 +1326,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101
-        actionIsOpen: 010100
+        actionIsOpen: 000101
         actionStartIndex: 000000000f00000012000000
         actionHashCodes: 81bfb30432d59402d7249c03
         unityObjectParams: []
@@ -1383,7 +1383,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           enumName: HutongGames.EasingFunction+Ease
-          intValue: 3
+          intValue: 0
         fsmFloatParams:
         - useVariable: 1
           name: lightIntensity
@@ -1484,7 +1484,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {x: 0, y: 0, z: 10}
+          value: {x: 0, y: 0, z: 15}
         - useVariable: 1
           name: 
           tooltip: 
@@ -2066,7 +2066,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {x: 0, y: 0, z: 10}
+        value: {x: 0, y: 0, z: 10.5}
       - useVariable: 1
         name: hitPoint
         tooltip: 
@@ -2125,7 +2125,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1

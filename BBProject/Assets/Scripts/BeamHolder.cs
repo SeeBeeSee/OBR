@@ -13,10 +13,6 @@ public class BeamHolder : MonoBehaviour
 
     private void Awake()
     {
-        // Setup before everything gets going
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
-
         // Fun stuff from SonicBloom to address event duping
         SonicBloom.Koreo.Players.AudioVisor.EstimationWindowBufferCount = 2d;
         SonicBloom.Koreo.Players.AudioVisor.OverEstimationPercent = 0.5d;
@@ -25,6 +21,9 @@ public class BeamHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Setup before everything gets going
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
 
         beams = new GameObject[spawnCount];
 
