@@ -7,6 +7,7 @@ using PlayMaker;
 public class MasterBeamParams : MonoBehaviour
 {
     public Koreographer k;
+    public float warning8ths;
     float eighthNoteDuration;
     PlayMakerFSM fsm;
 
@@ -16,7 +17,8 @@ public class MasterBeamParams : MonoBehaviour
         eighthNoteDuration = (float)(30f / k.GetMusicBPM());
         fsm = GetComponent<PlayMakerFSM>();
         // HARDCODED
-        fsm.FsmVariables.GetFsmFloat("eighthNoteDuration").Value = eighthNoteDuration * 3;
+        fsm.FsmVariables.GetFsmFloat("eighthNoteDuration").Value = eighthNoteDuration;
+        fsm.FsmVariables.GetFsmFloat("warningTime").Value = eighthNoteDuration * warning8ths;
     }
 
     // Update is called once per frame

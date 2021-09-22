@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: R-type-attacks
+  m_EditorClassIdentifier: 
+  mEventID: R-type-attacks
+  mEventList:
+  - mStartSample: 656597
+    mEndSample: 656597
+  - mStartSample: 827307
+    mEndSample: 827307
+  - mStartSample: 998017
+    mEndSample: 998017
+  - mStartSample: 1168727
+    mEndSample: 1168727
+  - mStartSample: 1339436
+    mEndSample: 1339436
+  - mStartSample: 1510146
+    mEndSample: 1510146
+  - mStartSample: 1680856
+    mEndSample: 1680856
+  - mStartSample: 1851566
+    mEndSample: 1851566
+  - mStartSample: 2022275
+    mEndSample: 2022275
+  - mStartSample: 2192985
+    mEndSample: 2192985
+  - mStartSample: 2363695
+    mEndSample: 2363695
+  - mStartSample: 2534405
+    mEndSample: 2534405
+  - mStartSample: 2705113
+    mEndSample: 2705113
+  - mStartSample: 2811806
+    mEndSample: 2811806
+  - mStartSample: 2833145
+    mEndSample: 2833145
+  - mStartSample: 2854484
+    mEndSample: 2854484
+  - mStartSample: 2875822
+    mEndSample: 2875822
+  - mStartSample: 2982515
+    mEndSample: 2982515
+  - mStartSample: 3003854
+    mEndSample: 3003854
+  - mStartSample: 3025193
+    mEndSample: 3025193
+  - mStartSample: 3046532
+    mEndSample: 3046532
+  - mStartSample: 3153225
+    mEndSample: 3153225
+  - mStartSample: 3174564
+    mEndSample: 3174564
+  - mStartSample: 3195903
+    mEndSample: 3195903
+  - mStartSample: 3217242
+    mEndSample: 3217242
+  - mStartSample: 3323935
+    mEndSample: 3323935
+  - mStartSample: 3345274
+    mEndSample: 3345274
+  - mStartSample: 3366613
+    mEndSample: 3366613
+  - mStartSample: 3387952
+    mEndSample: 3387952
+  - mStartSample: 3494645
+    mEndSample: 3494645
+  - mStartSample: 3515984
+    mEndSample: 3515984
+  - mStartSample: 3537323
+    mEndSample: 3537323
+  - mStartSample: 3558661
+    mEndSample: 3558661
+  - mStartSample: 3665354
+    mEndSample: 3665354
+  - mStartSample: 3686693
+    mEndSample: 3686693
+  - mStartSample: 3708032
+    mEndSample: 3708032
+  - mStartSample: 3729371
+    mEndSample: 3729371
+  - mStartSample: 3836064
+    mEndSample: 3836064
+  - mStartSample: 3857403
+    mEndSample: 3857403
+  - mStartSample: 3878742
+    mEndSample: 3878742
+  - mStartSample: 3900081
+    mEndSample: 3900081
+  - mStartSample: 4006774
+    mEndSample: 4006774
+  - mStartSample: 4028113
+    mEndSample: 4028113
+  - mStartSample: 4049452
+    mEndSample: 4049452
+  _SerializedPayloadTypes:
+  - SonicBloom.Koreo.TextPayload
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads:
+  - mTextVal: R,1,L,12,90
+  - mTextVal: R,5,R,12,90
+  - mTextVal: R,9,L,12,90
+  - mTextVal: R,13,R,12,90
+  - mTextVal: R,1,L,12,120
+  - mTextVal: R,5,R,12,120
+  - mTextVal: R,9,L,12,120
+  - mTextVal: R,13,R,12,120
+  - mTextVal: R,1,L,12,180
+  - mTextVal: R,5,R,12,180
+  - mTextVal: R,9,L,12,180
+  - mTextVal: R,13,R,12,180
+  - mTextVal: R,3,R,8,360
+  - mTextVal: O,5
+  - mTextVal: O,9
+  - mTextVal: O,13
+  - mTextVal: R,15,L,8,360
+  - mTextVal: O,1
+  - mTextVal: O,5
+  - mTextVal: O,9
+  - mTextVal: R,7,R,8,360
+  - mTextVal: O,5
+  - mTextVal: O,1
+  - mTextVal: O,13
+  - mTextVal: R,11,L,8,360
+  - mTextVal: O,9
+  - mTextVal: O,5
+  - mTextVal: O,1
+  - mTextVal: R,3,R,8,360
+  - mTextVal: O,5
+  - mTextVal: O,9
+  - mTextVal: O,13
+  - mTextVal: R,15,L,8,360
+  - mTextVal: O,1
+  - mTextVal: O,5
+  - mTextVal: O,9
+  - mTextVal: R,7,R,8,360
+  - mTextVal: O,5
+  - mTextVal: O,1
+  - mTextVal: O,13
+  - mTextVal: R,11,L,8,360
+  - mTextVal: O,9
+  - mTextVal: O,5
+  - mTextVal: O,1
+  _TextPayloadIdxs: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b000000

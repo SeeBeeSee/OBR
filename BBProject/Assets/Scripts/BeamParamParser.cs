@@ -9,7 +9,8 @@ public class BeamParamParser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fsm = GetComponent<PlayMakerFSM>();
+        // For beam cannons with multiple FSMs, the one we want to modify should always be first.
+        fsm = GetComponents<PlayMakerFSM>()[0];
     }
 
     // Update is called once per frame
@@ -21,8 +22,14 @@ public class BeamParamParser : MonoBehaviour
     public void ParseBeamParamString(string paramString)
     {
         // Expected string split char: ,
-        // Expected string param format:
+        // Expected string param format O-type:
         //  <type (O,B,R: string)>, <location (1-N: int)>, 
+        //  <cannon base color (3 floats)>, <beam base color (3 floats)>,
+        //  <beam emission color (3 floats)>, <cannon light color (3 floats)>
+
+        // Expected string param format R-type:
+        //  <type (O,B,R: string)>, <location (1-N: int)>, 
+        //  <rotation direction (L/R: string)>, <rotation duration in 8th notes (1-N: int)>, <rotation amount in degrees (1-N: float)>,
         //  <cannon base color (3 floats)>, <beam base color (3 floats)>,
         //  <beam emission color (3 floats)>, <cannon light color (3 floats)>
 
@@ -42,56 +49,127 @@ public class BeamParamParser : MonoBehaviour
 
 
 
-
-
-        if (paramList.Length > 2)
+        // Use one-off type
+        if (paramList[0] == "O")
         {
-            // type stuff for paramList[0]
+            if (paramList.Length > 2)
+            {
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "O";
+                // location stuff
+                fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
 
-            // location stuff
-            fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
+                // cannon and beam color stuff
+                fsm.FsmVariables.GetFsmBool("setColors").Value = true;
+                var baseColorValues = paramList[2].ToString().Split('-');
+                var baseColor = new Color(
+                    float.Parse(baseColorValues[0].ToString()) / 255,
+                    float.Parse(baseColorValues[1].ToString()) / 255,
+                    float.Parse(baseColorValues[2].ToString()) / 255
+                    );
 
-            fsm.FsmVariables.GetFsmBool("setColors").Value = true;
-            // cannon and beam color stuff
-            var baseColorValues = paramList[2].ToString().Split('-');
-            var baseColor = new Color(
-                float.Parse(baseColorValues[0].ToString()) / 255,
-                float.Parse(baseColorValues[1].ToString()) / 255,
-                float.Parse(baseColorValues[2].ToString()) / 255
-                );
+                var beamBaseColorValues = paramList[3].ToString().Split('-');
+                var beamBaseColor = new Color(
+                    float.Parse(beamBaseColorValues[0].ToString()) / 255,
+                    float.Parse(beamBaseColorValues[1].ToString()) / 255,
+                    float.Parse(beamBaseColorValues[2].ToString()) / 255
+                    );
 
-            var beamBaseColorValues = paramList[3].ToString().Split('-');
-            var beamBaseColor = new Color(
-                float.Parse(beamBaseColorValues[0].ToString()) / 255,
-                float.Parse(beamBaseColorValues[1].ToString()) / 255,
-                float.Parse(beamBaseColorValues[2].ToString()) / 255
-                );
+                float intensity = Mathf.Pow(2, 0.5f);
 
-            float intensity = Mathf.Pow(2, 0.5f);
+                var beamEmissionColorValues = paramList[4].ToString().Split('-');
+                var beamEmissionColor = new Color(
+                    float.Parse(beamEmissionColorValues[0].ToString()) * intensity / 255,
+                    float.Parse(beamEmissionColorValues[1].ToString()) * intensity / 255,
+                    float.Parse(beamEmissionColorValues[2].ToString()) * intensity / 255
+                    );
 
-            var beamEmissionColorValues = paramList[4].ToString().Split('-');
-            var beamEmissionColor = new Color(
-                float.Parse(beamEmissionColorValues[0].ToString()) * intensity / 255,
-                float.Parse(beamEmissionColorValues[1].ToString()) * intensity / 255,
-                float.Parse(beamEmissionColorValues[2].ToString()) * intensity / 255
-                );
+                var lightColorValues = paramList[4].ToString().Split('-');
+                var lightColor = new Color(
+                    float.Parse(lightColorValues[0].ToString()) / 255,
+                    float.Parse(lightColorValues[1].ToString()) / 255,
+                    float.Parse(lightColorValues[2].ToString()) / 255
+                    );
 
-            var lightColorValues = paramList[4].ToString().Split('-');
-            var lightColor = new Color(
-                float.Parse(lightColorValues[0].ToString()) / 255,
-                float.Parse(lightColorValues[1].ToString()) / 255,
-                float.Parse(lightColorValues[2].ToString()) / 255
-                );
+                fsm.FsmVariables.GetFsmColor("nextBaseColor").Value = baseColor;
+                fsm.FsmVariables.GetFsmColor("nextBeamBaseColor").Value = beamBaseColor;
+                fsm.FsmVariables.GetFsmColor("nextBeamEmissionColor").Value = beamEmissionColor;
+                fsm.FsmVariables.GetFsmColor("nextLightColor").Value = lightColor;
+            }
+            
+            // use fallback colors on prefab
+            else
+            {
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "O";
+                fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
+                fsm.FsmVariables.GetFsmBool("setColors").Value = false;
+            }
 
-            fsm.FsmVariables.GetFsmColor("nextBaseColor").Value = baseColor;
-            fsm.FsmVariables.GetFsmColor("nextBeamBaseColor").Value = beamBaseColor;
-            //fsm.FsmVariables.GetFsmColor("nextBeamEmissionColor").Value = beamEmissionColor;
-            fsm.FsmVariables.GetFsmColor("nextLightColor").Value = lightColor;
         }
-        else
+        
+
+        
+        else if (paramList[0] == "R")
         {
-            fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[0].ToString());
-            fsm.FsmVariables.GetFsmBool("setColors").Value = false;
+            // Use one-off type
+            if (paramList.Length > 5)
+            {
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "R";
+                // location stuff
+                fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
+
+                // rotation stuff
+                fsm.FsmVariables.GetFsmString("nextRotationDirection").Value = paramList[2].ToString();
+                fsm.FsmVariables.GetFsmFloat("nextRotationDuration").Value = float.Parse(paramList[3].ToString())
+                    * fsm.FsmVariables.GetFsmFloat("eighthNoteDuration").Value;
+                fsm.FsmVariables.GetFsmFloat("nextRotationAmount").Value = float.Parse(paramList[4].ToString());
+
+                // cannon and beam color stuff
+                fsm.FsmVariables.GetFsmBool("setColors").Value = true;
+                var baseColorValues = paramList[5].ToString().Split('-');
+                var baseColor = new Color(
+                    float.Parse(baseColorValues[0].ToString()) / 255,
+                    float.Parse(baseColorValues[1].ToString()) / 255,
+                    float.Parse(baseColorValues[2].ToString()) / 255
+                    );
+
+                var beamBaseColorValues = paramList[6].ToString().Split('-');
+                var beamBaseColor = new Color(
+                    float.Parse(beamBaseColorValues[0].ToString()) / 255,
+                    float.Parse(beamBaseColorValues[1].ToString()) / 255,
+                    float.Parse(beamBaseColorValues[2].ToString()) / 255
+                    );
+
+                float intensity = Mathf.Pow(2, 0.5f);
+
+                var beamEmissionColorValues = paramList[7].ToString().Split('-');
+                var beamEmissionColor = new Color(
+                    float.Parse(beamEmissionColorValues[0].ToString()) * intensity / 255,
+                    float.Parse(beamEmissionColorValues[1].ToString()) * intensity / 255,
+                    float.Parse(beamEmissionColorValues[2].ToString()) * intensity / 255
+                    );
+
+                var lightColorValues = paramList[8].ToString().Split('-');
+                var lightColor = new Color(
+                    float.Parse(lightColorValues[0].ToString()) / 255,
+                    float.Parse(lightColorValues[1].ToString()) / 255,
+                    float.Parse(lightColorValues[2].ToString()) / 255
+                    );
+
+                fsm.FsmVariables.GetFsmColor("nextBaseColor").Value = baseColor;
+                fsm.FsmVariables.GetFsmColor("nextBeamBaseColor").Value = beamBaseColor;
+                fsm.FsmVariables.GetFsmColor("nextBeamEmissionColor").Value = beamEmissionColor;
+                fsm.FsmVariables.GetFsmColor("nextLightColor").Value = lightColor;
+            }
+            else 
+            {
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "R";
+                fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
+                fsm.FsmVariables.GetFsmString("nextRotationDirection").Value = paramList[2].ToString();
+                fsm.FsmVariables.GetFsmFloat("nextRotationDuration").Value = float.Parse(paramList[3].ToString())
+                    * fsm.FsmVariables.GetFsmFloat("eighthNoteDuration").Value;
+                fsm.FsmVariables.GetFsmFloat("nextRotationAmount").Value = float.Parse(paramList[4].ToString());
+                fsm.FsmVariables.GetFsmBool("setColors").Value = false;
+            }
         }
 
     }

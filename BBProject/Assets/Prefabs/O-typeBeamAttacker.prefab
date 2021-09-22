@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 4673365454772465177}
   - component: {fileID: 4673365454772465182}
   m_Layer: 0
-  m_Name: BeamAttacker
+  m_Name: O-typeBeamAttacker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1564,7 +1564,7 @@ MonoBehaviour:
         customNames:
         - 
         - 
-        actionEnabled: 0001
+        actionEnabled: 0100
         actionIsOpen: 0101
         actionStartIndex: 0000000003000000
         actionHashCodes: 230cc80003da1f00
@@ -2002,16 +2002,7 @@ MonoBehaviour:
     - name: HIT
       isSystemEvent: 0
       isGlobal: 1
-    globalTransitions:
-    - fsmEvent:
-        name: FIRE
-        isSystemEvent: 0
-        isGlobal: 1
-      toState: Fire Begin
-      linkStyle: 0
-      linkConstraint: 0
-      linkTarget: 0
-      colorIndex: 0
+    globalTransitions: []
     variables:
       floatVariables:
       - useVariable: 1
