@@ -1,2 +1,2 @@
-# BeatBall
-A rhythm-based bullet hell/action game made with Unity 2020.
+# OBR
+A rhythm game made with Unity 2020.
