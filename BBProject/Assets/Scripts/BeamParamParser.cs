@@ -22,7 +22,13 @@ public class BeamParamParser : MonoBehaviour
     public void ParseBeamParamString(string paramString)
     {
         // Expected string split char: ,
+
         // Expected string param format O-type:
+        //  <type (O,B,R: string)>, <location (1-N: int)>, 
+        //  <cannon base color (3 floats)>, <beam base color (3 floats)>,
+        //  <beam emission color (3 floats)>, <cannon light color (3 floats)>
+
+        // Expected string param format B-type:
         //  <type (O,B,R: string)>, <location (1-N: int)>, 
         //  <cannon base color (3 floats)>, <beam base color (3 floats)>,
         //  <beam emission color (3 floats)>, <cannon light color (3 floats)>
@@ -50,11 +56,11 @@ public class BeamParamParser : MonoBehaviour
 
 
         // Use one-off type
-        if (paramList[0] == "O")
+        if (paramList[0] == "O" || paramList[0] == "B")
         {
             if (paramList.Length > 2)
             {
-                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "O";
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = paramList[0];
                 // location stuff
                 fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
 
@@ -99,7 +105,7 @@ public class BeamParamParser : MonoBehaviour
             // use fallback colors on prefab
             else
             {
-                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "O";
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = paramList[0];
                 fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
                 fsm.FsmVariables.GetFsmBool("setColors").Value = false;
             }

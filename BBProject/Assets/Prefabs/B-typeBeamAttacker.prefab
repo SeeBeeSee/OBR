@@ -42,9 +42,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.5049739, g: 0, b: 1, a: 1}
+  m_Color: {r: 0.4331751, g: 1, b: 0, a: 1}
   m_Intensity: 0
-  m_Range: 2.5
+  m_Range: 1.6
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 4673365453640636937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 4673365454901650022}
   m_RootOrder: 0
@@ -212,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 4673365453641947187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.8}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1.6}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1.6}
   m_Children:
   - {fileID: 4673365454272056289}
   m_Father: {fileID: 4673365454772465177}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 4673365454772465177}
   - component: {fileID: 4673365454772465182}
   m_Layer: 0
-  m_Name: O-typeBeamAttacker
+  m_Name: B-typeBeamAttacker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101010101010101
-        actionIsOpen: 0000000000000001
+        actionIsOpen: 0000000000000000
         actionStartIndex: 0000000004000000070000000d00000013000000190000001f00000025000000
         actionHashCodes: f8c5660132d5940231ae640331ae640331ae640331ae640331ae6403be71c903
         unityObjectParams: []
@@ -831,7 +831,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 5
+          value: 7
         - useVariable: 0
           name: 
           tooltip: 
@@ -885,13 +885,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.25
+          value: 0.15
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.25
+          value: 0.15
         - useVariable: 1
           name: hitScale
           tooltip: 
@@ -1109,7 +1109,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010100
-        actionIsOpen: 01000001
+        actionIsOpen: 00010001
         actionStartIndex: 000000000f000000120000001f000000
         actionHashCodes: 81bfb30432d5940273d1f0039c59e501
         unityObjectParams: []
@@ -1186,7 +1186,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 5
+          value: 7
         - useVariable: 0
           name: 
           tooltip: 
@@ -1326,7 +1326,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101
-        actionIsOpen: 000101
+        actionIsOpen: 010000
         actionStartIndex: 000000000f00000012000000
         actionHashCodes: 81bfb30432d59402d7249c03
         unityObjectParams: []
@@ -1484,7 +1484,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {x: 0, y: 0, z: 15}
+          value: {x: 0, y: 0, z: 10.5}
         - useVariable: 1
           name: 
           tooltip: 
@@ -2070,25 +2070,25 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 0.45882353, g: 0.6745098, b: 1, a: 1}
+        value: {r: 0.38777712, g: 0.8867924, b: 0.36391956, a: 1}
       - useVariable: 1
         name: cannonLightColor
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 0.5058824, g: 0, b: 1, a: 1}
+        value: {r: 0.43137255, g: 1, b: 0, a: 1}
       - useVariable: 1
         name: cannonBeamBaseColor
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 0.77254903, g: 0.18431373, b: 0.99607843, a: 1}
+        value: {r: 0.2622375, g: 0.7830189, b: 0.27802455, a: 1}
       - useVariable: 1
         name: cannonBeamEmissionColor
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: {r: 0.2784314, g: 0.015686275, b: 0.49411765, a: 1}
+        value: {r: 0.37344527, g: 0.6784314, b: 0, a: 1}
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables:
@@ -2311,7 +2311,7 @@ Transform:
   m_GameObject: {fileID: 4673365455216060986}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.000000029802322, z: 0.5}
-  m_LocalScale: {x: 0.4, y: 0.2, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4673365454901650022}
   m_RootOrder: 1
