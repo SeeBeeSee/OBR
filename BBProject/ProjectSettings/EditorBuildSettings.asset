@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Old/pauseMenuWork.unity
     guid: 8de96f87b73eb13489f4e6cb0741c803
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/gridAndMouse.unity
     guid: 7cebcca3b31b5064799f51a687b8e422
+  - enabled: 1
+    path: Assets/Scenes/Playtesting-Animal Land.unity
+    guid: 0fae16c85ceba3d46b32055326fec041
   m_configObjects: {}
