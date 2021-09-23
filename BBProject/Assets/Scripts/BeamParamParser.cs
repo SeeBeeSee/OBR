@@ -29,7 +29,7 @@ public class BeamParamParser : MonoBehaviour
         //  <beam emission color (3 floats)>, <cannon light color (3 floats)>
 
         // Expected string param format B-type:
-        //  <type (O,B,R: string)>, <location (1-N: int)>, 
+        //  <type (O,B,R: string)>, <locations (int[])>,
         //  <cannon base color (3 floats)>, <beam base color (3 floats)>,
         //  <beam emission color (3 floats)>, <cannon light color (3 floats)>
 
@@ -56,11 +56,11 @@ public class BeamParamParser : MonoBehaviour
 
 
         // Use one-off type
-        if (paramList[0] == "O" || paramList[0] == "B")
+        if (paramList[0] == "O")
         {
             if (paramList.Length > 2)
             {
-                fsm.FsmVariables.GetFsmString("nextBeamType").Value = paramList[0];
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "O";
                 // location stuff
                 fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
 
@@ -105,11 +105,39 @@ public class BeamParamParser : MonoBehaviour
             // use fallback colors on prefab
             else
             {
-                fsm.FsmVariables.GetFsmString("nextBeamType").Value = paramList[0];
+                fsm.FsmVariables.GetFsmString("nextBeamType").Value = "O";
                 fsm.FsmVariables.GetFsmInt("nextBeamToFire").Value = int.Parse(paramList[1].ToString());
                 fsm.FsmVariables.GetFsmBool("setColors").Value = false;
             }
 
+        }
+
+        else if (paramList[0] == "B")
+        {
+            fsm.FsmVariables.GetFsmString("nextBeamType").Value = "B";
+
+            // With colors (not yet)
+            if (paramList.Length > 2)
+            {
+
+            }
+
+            // Fallback colors
+            else if (paramList.Length == 2)
+            {
+                var cannonLocationsRaw = paramList[1].Split('-');
+                foreach(string s in cannonLocationsRaw) Debug.Log(s);
+                var beamLocations = new int[cannonLocationsRaw.Length];
+                var fsmInts = fsm.FsmVariables.GetFsmArray("nextBTypesToFire");
+                for (int i=0; i<cannonLocationsRaw.Length; i++)
+                {
+                    beamLocations[i] = int.Parse(cannonLocationsRaw[i]);
+                    //Debug.Log(beamLocations);
+                    fsmInts.InsertItem(beamLocations[i], i);
+                }
+                fsmInts.SaveChanges();
+                fsm.FsmVariables.GetFsmBool("setColors").Value = false;
+            }
         }
         
 
