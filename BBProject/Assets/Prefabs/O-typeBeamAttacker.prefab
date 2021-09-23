@@ -735,7 +735,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010101010101
-        actionIsOpen: 01000101000100
+        actionIsOpen: 01000101010100
         actionStartIndex: 0000000003000000070000001700000020000000230000002a000000
         actionHashCodes: 32d59402f8c56601d3bd7b05e39c8c049845b305afff110573d1f003
         unityObjectParams: []
@@ -845,7 +845,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: hitScale
+          name: internalHitScale
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -869,7 +869,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: hitScale
+          name: internalHitScale
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -893,7 +893,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0.25
         - useVariable: 1
-          name: hitScale
+          name: internalHitScale
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1484,7 +1484,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {x: 0, y: 0, z: 15}
+          value: {x: 0, y: 0, z: 10.5}
         - useVariable: 1
           name: 
           tooltip: 
@@ -2041,6 +2041,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: internalHitScale
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       intVariables: []
       boolVariables:
       - useVariable: 1
@@ -2105,7 +2111,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

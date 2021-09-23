@@ -2145,7 +2145,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: R-type-attacks
+          value: beam-attack
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -4323,7 +4323,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -4341,7 +4341,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -4504,7 +4504,7 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 000101
+        actionEnabled: 010101
         actionIsOpen: 000001
         actionStartIndex: 000000000400000013000000
         actionHashCodes: 34b46c04741578039cadd204
@@ -4568,7 +4568,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -4586,7 +4586,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -4665,7 +4665,7 @@ MonoBehaviour:
         - 
         - 
         - 
-        - beginRetract
+        - 
         byteData: 01000000010a00000000000000010000000a00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -4965,7 +4965,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -4983,7 +4983,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -5146,7 +5146,7 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 000101
+        actionEnabled: 010101
         actionIsOpen: 000001
         actionStartIndex: 000000000400000013000000
         actionHashCodes: 34b46c04741578039cadd204
@@ -5210,7 +5210,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -5228,7 +5228,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.15
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -5307,7 +5307,7 @@ MonoBehaviour:
         - 
         - 
         - 
-        - beginRetract
+        - 
         byteData: 00000000010a00000000000000010000000a00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -6087,7 +6087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPlayOnAwake: 1
-  koreography: {fileID: 11400000, guid: 1141ee6d4d7c8b94fb65941d9c294c61, type: 2}
+  koreography: {fileID: 11400000, guid: 75d8feede35e5034b8df60b9807633d0, type: 2}
   targetKoreographer: {fileID: 0}
 --- !u!82 &1671144002
 AudioSource:

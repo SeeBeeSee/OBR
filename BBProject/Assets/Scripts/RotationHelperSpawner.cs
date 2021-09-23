@@ -45,8 +45,8 @@ public class RotationHelperSpawner : MonoBehaviour
             {
                 // instantiate a helper at the next spot in the path
                 var angle = startAngle - (i * (2 * Mathf.PI) * (angleAmount / 360) / helperCount);
-                var x = Mathf.Cos(angle) * 4.5f;
-                var z = Mathf.Sin(angle) * 4.5f;
+                var x = Mathf.Cos(angle) * 3.5f;
+                var z = Mathf.Sin(angle) * 3.5f;
                 Vector3 helperPos = warningHolder.position + new Vector3(x, 0, z);
                 var newSpawn = Instantiate(rotationHelperObj, helperPos, Quaternion.identity);
                 // parent the helper to the warningHolder

@@ -1,0 +1,271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: beam-attack
+  m_EditorClassIdentifier: 
+  mEventID: beam-attack
+  mEventList:
+  - mStartSample: 71983
+    mEndSample: 71983
+  - mStartSample: 107263
+    mEndSample: 107263
+  - mStartSample: 111673
+    mEndSample: 111673
+  - mStartSample: 116083
+    mEndSample: 116083
+  - mStartSample: 142543
+    mEndSample: 142543
+  - mStartSample: 146953
+    mEndSample: 146953
+  - mStartSample: 151363
+    mEndSample: 151363
+  - mStartSample: 213103
+    mEndSample: 213103
+  - mStartSample: 248383
+    mEndSample: 248383
+  - mStartSample: 252793
+    mEndSample: 252793
+  - mStartSample: 257203
+    mEndSample: 257203
+  - mStartSample: 283663
+    mEndSample: 283663
+  - mStartSample: 288073
+    mEndSample: 288073
+  - mStartSample: 292483
+    mEndSample: 292483
+  - mStartSample: 354223
+    mEndSample: 354223
+  - mStartSample: 371863
+    mEndSample: 371863
+  - mStartSample: 389503
+    mEndSample: 389503
+  - mStartSample: 398323
+    mEndSample: 398323
+  - mStartSample: 407143
+    mEndSample: 407143
+  - mStartSample: 415963
+    mEndSample: 415963
+  - mStartSample: 424783
+    mEndSample: 424783
+  - mStartSample: 442423
+    mEndSample: 442423
+  - mStartSample: 451243
+    mEndSample: 451243
+  - mStartSample: 460063
+    mEndSample: 460063
+  - mStartSample: 495343
+    mEndSample: 495343
+  - mStartSample: 512983
+    mEndSample: 512983
+  - mStartSample: 530623
+    mEndSample: 530623
+  - mStartSample: 539443
+    mEndSample: 539443
+  - mStartSample: 548263
+    mEndSample: 548263
+  - mStartSample: 557083
+    mEndSample: 557083
+  - mStartSample: 565903
+    mEndSample: 565903
+  - mStartSample: 583543
+    mEndSample: 583543
+  - mStartSample: 601183
+    mEndSample: 601183
+  - mStartSample: 636463
+    mEndSample: 636463
+  - mStartSample: 654103
+    mEndSample: 654103
+  - mStartSample: 671743
+    mEndSample: 671743
+  - mStartSample: 680563
+    mEndSample: 680563
+  - mStartSample: 689383
+    mEndSample: 689383
+  - mStartSample: 698203
+    mEndSample: 698203
+  - mStartSample: 707023
+    mEndSample: 707023
+  - mStartSample: 724663
+    mEndSample: 724663
+  - mStartSample: 733483
+    mEndSample: 733483
+  - mStartSample: 742303
+    mEndSample: 742303
+  - mStartSample: 777583
+    mEndSample: 777583
+  - mStartSample: 795223
+    mEndSample: 795223
+  - mStartSample: 812863
+    mEndSample: 812863
+  - mStartSample: 821683
+    mEndSample: 821683
+  - mStartSample: 830503
+    mEndSample: 830503
+  - mStartSample: 839323
+    mEndSample: 839323
+  - mStartSample: 848143
+    mEndSample: 848143
+  - mStartSample: 865783
+    mEndSample: 865783
+  - mStartSample: 883423
+    mEndSample: 883423
+  - mStartSample: 918703
+    mEndSample: 918703
+  - mStartSample: 945163
+    mEndSample: 945163
+  - mStartSample: 949573
+    mEndSample: 949573
+  - mStartSample: 953983
+    mEndSample: 953983
+  - mStartSample: 989263
+    mEndSample: 989263
+  - mStartSample: 1015723
+    mEndSample: 1015723
+  - mStartSample: 1020133
+    mEndSample: 1020133
+  - mStartSample: 1024543
+    mEndSample: 1024543
+  - mStartSample: 1059823
+    mEndSample: 1059823
+  - mStartSample: 1086283
+    mEndSample: 1086283
+  - mStartSample: 1090693
+    mEndSample: 1090693
+  - mStartSample: 1095103
+    mEndSample: 1095103
+  - mStartSample: 1112743
+    mEndSample: 1112743
+  - mStartSample: 1130383
+    mEndSample: 1130383
+  - mStartSample: 1148023
+    mEndSample: 1148023
+  - mStartSample: 1165663
+    mEndSample: 1165663
+  - mStartSample: 1174483
+    mEndSample: 1174483
+  - mStartSample: 1183303
+    mEndSample: 1183303
+  - mStartSample: 1192123
+    mEndSample: 1192123
+  - mStartSample: 1200943
+    mEndSample: 1200943
+  - mStartSample: 1227403
+    mEndSample: 1227403
+  - mStartSample: 1231813
+    mEndSample: 1231813
+  - mStartSample: 1236223
+    mEndSample: 1236223
+  - mStartSample: 1271503
+    mEndSample: 1271503
+  - mStartSample: 1297963
+    mEndSample: 1297963
+  - mStartSample: 1302373
+    mEndSample: 1302373
+  - mStartSample: 1306783
+    mEndSample: 1306783
+  _SerializedPayloadTypes:
+  - SonicBloom.Koreo.TextPayload
+  _AssetPayloads: []
+  _AssetPayloadIdxs: 
+  _ColorPayloads: []
+  _ColorPayloadIdxs: 
+  _CurvePayloads: []
+  _CurvePayloadIdxs: 
+  _FloatPayloads: []
+  _FloatPayloadIdxs: 
+  _GradientPayloads: []
+  _GradientPayloadIdxs: 
+  _IntPayloads: []
+  _IntPayloadIdxs: 
+  _SpectrumPayloads: []
+  _SpectrumPayloadIdxs: 
+  _TextPayloads:
+  - mTextVal: O,9
+  - mTextVal: B,11
+  - mTextVal: O,9
+  - mTextVal: B,7
+  - mTextVal: B,11
+  - mTextVal: O,9
+  - mTextVal: B,7
+  - mTextVal: O,9
+  - mTextVal: B,11
+  - mTextVal: O,9
+  - mTextVal: B,7
+  - mTextVal: B,11
+  - mTextVal: O,9
+  - mTextVal: B,7
+  - mTextVal: O,8
+  - mTextVal: O,2
+  - mTextVal: O,8
+  - mTextVal: B,6
+  - mTextVal: O,4
+  - mTextVal: B,2
+  - mTextVal: O,3
+  - mTextVal: O,6
+  - mTextVal: B,4
+  - mTextVal: O,5
+  - mTextVal: O,8
+  - mTextVal: O,2
+  - mTextVal: O,8
+  - mTextVal: B,6
+  - mTextVal: O,4
+  - mTextVal: B,2
+  - mTextVal: O,1
+  - mTextVal: O,5
+  - mTextVal: O,9
+  - mTextVal: O,10
+  - mTextVal: O,16
+  - mTextVal: O,10
+  - mTextVal: B,12
+  - mTextVal: O,14
+  - mTextVal: B,16
+  - mTextVal: O,15
+  - mTextVal: O,12
+  - mTextVal: B,14
+  - mTextVal: O,13
+  - mTextVal: O,10
+  - mTextVal: O,16
+  - mTextVal: O,10
+  - mTextVal: B,12
+  - mTextVal: O,14
+  - mTextVal: B,16
+  - mTextVal: O,1
+  - mTextVal: O,13
+  - mTextVal: O,9
+  - mTextVal: R,9,R,6,180
+  - mTextVal: B,8
+  - mTextVal: B,7
+  - mTextVal: B,6
+  - mTextVal: O,1
+  - mTextVal: B,3
+  - mTextVal: O,1
+  - mTextVal: B,15
+  - mTextVal: R,1,L,6,180
+  - mTextVal: B,2
+  - mTextVal: B,3
+  - mTextVal: B,4
+  - mTextVal: B,7
+  - mTextVal: B,8
+  - mTextVal: O,9
+  - mTextVal: O,7
+  - mTextVal: B,5
+  - mTextVal: O,3
+  - mTextVal: B,4
+  - mTextVal: R,5,L,6,180
+  - mTextVal: B,6
+  - mTextVal: B,7
+  - mTextVal: B,8
+  - mTextVal: O,13
+  - mTextVal: B,15
+  - mTextVal: B,11
+  - mTextVal: O,13
+  _TextPayloadIdxs: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e000000
