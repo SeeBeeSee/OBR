@@ -21,7 +21,8 @@ public class BeamParamParser : MonoBehaviour
 
     public void ParseBeamParamString(string paramString)
     {
-        // Expected string split char: ,
+        // Expected string param split char: ,
+        // Expected B-type location split char: #
 
         // Expected string param format O-type:
         //  <type (O,B,R: string)>, <location (1-N: int)>, 
@@ -119,13 +120,64 @@ public class BeamParamParser : MonoBehaviour
             // With colors (not yet)
             if (paramList.Length > 2)
             {
+                var cannonLocationsRaw = paramList[1].Split('#');
+                foreach (string s in cannonLocationsRaw) Debug.Log(s);
+                var beamLocations = new int[cannonLocationsRaw.Length];
+                var fsmInts = fsm.FsmVariables.GetFsmArray("nextBTypesToFire");
+                for (int i = 0; i < cannonLocationsRaw.Length; i++)
+                {
+                    beamLocations[i] = int.Parse(cannonLocationsRaw[i]);
+                    //Debug.Log(beamLocations);
+                    fsmInts.InsertItem(beamLocations[i], i);
+                }
+                fsmInts.SaveChanges();
 
+                // cannon and beam color stuff
+
+                // To avoid confusion, multi-cannon B-type attacks can't have
+                // different colors for each cannon in a single attack,
+                // i.e., they MUST all be the same color for that attack
+                fsm.FsmVariables.GetFsmBool("setColors").Value = true;
+                var baseColorValues = paramList[2].ToString().Split('-');
+                var baseColor = new Color(
+                    float.Parse(baseColorValues[0].ToString()) / 255,
+                    float.Parse(baseColorValues[1].ToString()) / 255,
+                    float.Parse(baseColorValues[2].ToString()) / 255
+                    );
+
+                var beamBaseColorValues = paramList[3].ToString().Split('-');
+                var beamBaseColor = new Color(
+                    float.Parse(beamBaseColorValues[0].ToString()) / 255,
+                    float.Parse(beamBaseColorValues[1].ToString()) / 255,
+                    float.Parse(beamBaseColorValues[2].ToString()) / 255
+                    );
+
+                float intensity = Mathf.Pow(2, 0.5f);
+
+                var beamEmissionColorValues = paramList[4].ToString().Split('-');
+                var beamEmissionColor = new Color(
+                    float.Parse(beamEmissionColorValues[0].ToString()) * intensity / 255,
+                    float.Parse(beamEmissionColorValues[1].ToString()) * intensity / 255,
+                    float.Parse(beamEmissionColorValues[2].ToString()) * intensity / 255
+                    );
+
+                var lightColorValues = paramList[4].ToString().Split('-');
+                var lightColor = new Color(
+                    float.Parse(lightColorValues[0].ToString()) / 255,
+                    float.Parse(lightColorValues[1].ToString()) / 255,
+                    float.Parse(lightColorValues[2].ToString()) / 255
+                    );
+
+                fsm.FsmVariables.GetFsmColor("nextBaseColor").Value = baseColor;
+                fsm.FsmVariables.GetFsmColor("nextBeamBaseColor").Value = beamBaseColor;
+                fsm.FsmVariables.GetFsmColor("nextBeamEmissionColor").Value = beamEmissionColor;
+                fsm.FsmVariables.GetFsmColor("nextLightColor").Value = lightColor;
             }
 
             // Fallback colors
             else if (paramList.Length == 2)
             {
-                var cannonLocationsRaw = paramList[1].Split('-');
+                var cannonLocationsRaw = paramList[1].Split('#');
                 foreach(string s in cannonLocationsRaw) Debug.Log(s);
                 var beamLocations = new int[cannonLocationsRaw.Length];
                 var fsmInts = fsm.FsmVariables.GetFsmArray("nextBTypesToFire");
