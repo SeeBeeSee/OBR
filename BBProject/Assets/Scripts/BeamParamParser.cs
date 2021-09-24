@@ -121,7 +121,7 @@ public class BeamParamParser : MonoBehaviour
             if (paramList.Length > 2)
             {
                 var cannonLocationsRaw = paramList[1].Split('#');
-                foreach (string s in cannonLocationsRaw) Debug.Log(s);
+                //foreach (string s in cannonLocationsRaw) Debug.Log(s);
                 var beamLocations = new int[cannonLocationsRaw.Length];
                 var fsmInts = fsm.FsmVariables.GetFsmArray("nextBTypesToFire");
                 for (int i = 0; i < cannonLocationsRaw.Length; i++)
@@ -178,7 +178,7 @@ public class BeamParamParser : MonoBehaviour
             else if (paramList.Length == 2)
             {
                 var cannonLocationsRaw = paramList[1].Split('#');
-                foreach(string s in cannonLocationsRaw) Debug.Log(s);
+                //foreach(string s in cannonLocationsRaw) Debug.Log(s);
                 var beamLocations = new int[cannonLocationsRaw.Length];
                 var fsmInts = fsm.FsmVariables.GetFsmArray("nextBTypesToFire");
                 for (int i=0; i<cannonLocationsRaw.Length; i++)

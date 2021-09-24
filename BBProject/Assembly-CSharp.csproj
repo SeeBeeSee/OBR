@@ -452,6 +452,7 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\SendSceneLoadedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Time\PerSecond.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorCurrentTransitionInfoIsName.cs" />
+    <Compile Include="Assets\Scripts\RotationHelperSpawner.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\DetectDeviceOrientation.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\AddComponent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\SampleCurve.cs" />
@@ -1148,7 +1149,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
     <Compile Include="Assets\Koreographer\Integrations\PlayMaker\Actions\SimpleMusicPlayerPause.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
-    <Compile Include="Assets\Scripts\RotationHelperSpawner.cs" />
+    <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Readme.txt" />
