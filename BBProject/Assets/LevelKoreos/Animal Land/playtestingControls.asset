@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: playtesting-controls
   mEventList:
-  - mStartSample: 345403
-    mEndSample: 345403
-  - mStartSample: 2003563
-    mEndSample: 2003563
+  - mStartSample: 2074123
+    mEndSample: 2074123
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

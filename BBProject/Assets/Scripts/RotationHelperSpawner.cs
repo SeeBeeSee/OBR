@@ -27,7 +27,7 @@ public class RotationHelperSpawner : MonoBehaviour
 
     IEnumerator SpawnHelpersTimed(float startAngle, float angleAmount, float angleDuration, string direction, Transform warningHolder)
     {
-        var angleRate = 1 / ((720 / angleAmount) / angleDuration);
+        var angleRate = 1 / ((360 / angleAmount) / angleDuration);
         var helperCount = 16 * angleRate;
         var start = 0;
 
