@@ -19,7 +19,7 @@ MonoBehaviour:
   mTempoSections:
   - sectionName: Intro
     startSample: 0
-    samplesPerBeat: 22050
+    samplesPerBeat: 17640
     beatsPerMeasure: 4
     bStartNewMeasure: 1
   - sectionName: Main
@@ -29,3 +29,4 @@ MonoBehaviour:
     bStartNewMeasure: 1
   mTracks:
   - {fileID: 11400000, guid: 98a4fc1aa5e705842952902af584eccc, type: 2}
+  - {fileID: 11400000, guid: c85f9165c519c704c8f12af5c0a64c11, type: 2}
