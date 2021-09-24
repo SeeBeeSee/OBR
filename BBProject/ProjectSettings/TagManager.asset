@@ -38,8 +38,11 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PillarboxUI
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pillarbox
+    uniqueID: 721617749
     locked: 0
