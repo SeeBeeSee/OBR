@@ -50,7 +50,13 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 180
-    intVariables: []
+    intVariables:
+    - useVariable: 1
+      name: totalAttacks
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     boolVariables:
     - useVariable: 1
       name: hitResult
@@ -96,7 +102,7 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   events:
   - dashEvent
   - SongSelect
@@ -106,8 +112,6 @@ MonoBehaviour:
   - restartFade
   - fire
   - FIRE
-  - BLOCK
-  - HIT
   - raycastEvent
   - endRaycastEvent
   - TriggerLeftLight
@@ -118,3 +122,12 @@ MonoBehaviour:
   - stop
   - BEGIN
   - END
+  - BLOCK
+  - HIT
+  - B-BLOCK
+  - B-HIT
+  - O-BLOCK
+  - O-HIT
+  - R-BLOCK
+  - R-HIT
+  - ADDATTACK

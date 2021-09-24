@@ -572,7 +572,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010101010101010101
-        actionIsOpen: 00000000000000000000
+        actionIsOpen: 00000000000000000100
         actionStartIndex: 0000000004000000070000000d00000013000000190000001f00000025000000280000002b000000
         actionHashCodes: f8c5660132d5940231ae640331ae640331ae640331ae640331ae6403be71c9039845b3059845b305
         unityObjectParams: []
@@ -2667,7 +2667,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -2740,14 +2740,22 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.FloatDivide
         - HutongGames.PlayMaker.Actions.FloatAdd
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        - HutongGames.PlayMaker.Actions.FloatDivide
+        - HutongGames.PlayMaker.Actions.FloatMultiply
+        - HutongGames.PlayMaker.Actions.SetIntFromFloat
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 9845b3059845b3052a6e8a00
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010001010101
+        actionIsOpen: 00000001010101
+        actionStartIndex: 0000000003000000060000000a0000000d0000001000000013000000
+        actionHashCodes: 9845b3059845b3052a6e8a009845b3059845b3059845b3054da30005
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2799,7 +2807,55 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0.001
-        fsmIntParams: []
+        - useVariable: 1
+          name: raycastCountFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: rotationDuration
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
+        - useVariable: 1
+          name: raycastCountFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: eighthNoteDuration
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: raycastCountFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        - useVariable: 1
+          name: raycastCountFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: raycastCount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -2807,12 +2863,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00000000
+        byteData: 0000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000000f000000010000000f0000000f000000010000000f0000000f0000000100000001000000
+        paramDataType: 0f0000000f000000010000000f0000000f000000010000000f0000000f00000001000000010000000f0000000f000000010000000f0000000f000000010000000f0000000f00000001000000100000000f00000001000000
         paramName:
         - floatVariable
         - floatValue
@@ -2824,8 +2880,20 @@ MonoBehaviour:
         - add
         - everyFrame
         - perSecond
-        paramDataPos: 00000000010000000000000002000000030000000100000004000000050000000200000003000000
-        paramByteDataSize: 00000000000000000100000000000000000000000100000000000000000000000100000001000000
+        - floatVariable
+        - floatValue
+        - everyFrame
+        - floatVariable
+        - divideBy
+        - everyFrame
+        - floatVariable
+        - multiplyBy
+        - everyFrame
+        - intVariable
+        - floatValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000300000001000000040000000500000002000000030000000600000007000000040000000800000009000000050000000a0000000b00000006000000000000000c00000007000000
+        paramByteDataSize: 00000000000000000100000000000000000000000100000000000000000000000100000001000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000001000000
     - name: DetectHitBlock
       description: Update's player score whether beam hit them or their shield.
       colorIndex: 0
@@ -3055,17 +3123,17 @@ MonoBehaviour:
         serializedVersion: 2
         x: 379.10938
         y: 250.44531
-        width: 117
+        width: 150
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: waitForNextRaycast
+          isSystemEvent: 0
           isGlobal: 0
-        toState: Fire Raycasts
+        toState: RaycastWait
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -3073,14 +3141,16 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
-        - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.IntAdd
+        - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 5e69bb0448c01101
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000400000007000000
+        actionHashCodes: 5e69bb04603dd90509faa102
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3134,13 +3204,31 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        fsmIntParams:
         - useVariable: 1
-          name: raycastDuration
+          name: currentRaycast
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
-        fsmIntParams: []
+        - useVariable: 1
+          name: currentRaycast
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: raycastCount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -3148,24 +3236,32 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - BLOCK
-        - FINISHED
-        byteData: 0000
+        - R-BLOCK
+        - 
+        - waitForNextRaycast
+        - 
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000170000000f000000010000000f0000001700000001000000
+        paramDataType: 1f000000170000000f00000001000000100000001000000001000000100000001000000017000000170000001700000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 00000000000000000000000000000000010000000100000001000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000001000000
+        - intVariable
+        - add
+        - everyFrame
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000000000000100000001000000020000000300000001000000020000000300000002000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: FireHitEvent
       description: 
       colorIndex: 0
@@ -3173,17 +3269,17 @@ MonoBehaviour:
         serializedVersion: 2
         x: 547.8828
         y: 251.32031
-        width: 102
+        width: 150
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: waitForNextRaycast
+          isSystemEvent: 0
           isGlobal: 0
-        toState: Fire Raycasts
+        toState: RaycastWait
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -3191,14 +3287,16 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEvent
-        - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.IntAdd
+        - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 5e69bb0448c01101
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000400000007000000
+        actionHashCodes: 5e69bb04603dd90509faa102
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3252,13 +3350,31 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        fsmIntParams:
         - useVariable: 1
-          name: raycastDuration
+          name: currentRaycast
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
-        fsmIntParams: []
+        - useVariable: 1
+          name: currentRaycast
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: raycastCount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -3266,24 +3382,32 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - HIT
-        - FINISHED
-        byteData: 0000
+        - R-HIT
+        - 
+        - waitForNextRaycast
+        - 
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000170000000f000000010000000f0000001700000001000000
+        paramDataType: 1f000000170000000f00000001000000100000001000000001000000100000001000000017000000170000001700000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 00000000000000000000000000000000010000000100000001000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000001000000
+        - intVariable
+        - add
+        - everyFrame
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000000000000100000001000000020000000300000001000000020000000300000002000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Fire Raycasts
       description: 
       colorIndex: 0
@@ -3314,7 +3438,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101
-        actionIsOpen: 0101
+        actionIsOpen: 0001
         actionStartIndex: 0000000010000000
         actionHashCodes: d3bd7b055e69bb04
         unityObjectParams: []
@@ -3338,14 +3462,14 @@ MonoBehaviour:
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams:
-        - target: 0
+        - target: 4
           excludeSelf:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 0
+            value: 1
           gameObject:
             ownerOption: 0
             gameObject:
@@ -3459,7 +3583,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        - FINISHED
+        - ADDATTACK
         byteData: 0100000000
         arrayParamSizes: 00000000
         arrayParamTypes:
@@ -3490,6 +3614,79 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000000000000000000000000000020000000300000001000000000000000000000001000000000000000200000000000000010000000200000004000000
         paramByteDataSize: 0000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: RaycastWait
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 469
+        y: 313
+        width: 105
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Fire Raycasts
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: raycastDuration
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: BLOCK
       isSystemEvent: 0
@@ -3507,6 +3704,15 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 1
     - name: raycastHit
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: R-BLOCK
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: R-HIT
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: waitForNextRaycast
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -3554,7 +3760,31 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      intVariables: []
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: raycastCountFloat
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      intVariables:
+      - useVariable: 1
+        name: raycastCount
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: currentRaycast
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables:
       - useVariable: 1
         name: 
@@ -3606,7 +3836,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -3617,7 +3847,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
