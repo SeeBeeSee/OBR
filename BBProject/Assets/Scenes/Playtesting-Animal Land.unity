@@ -2384,7 +2384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1237839128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2461,7 +2461,7 @@ MonoBehaviour:
         customNames:
         - 
         - 
-        actionEnabled: 0001
+        actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000003000000
         actionHashCodes: 9c59e50183f8e904
@@ -2538,6 +2538,7 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.DebugLog
         - SonicBloom.Koreo.PlayMaker.GetKoreographyEventPayloadText
         - HutongGames.PlayMaker.Actions.IntAdd
         - HutongGames.PlayMaker.Actions.CallMethod
@@ -2551,10 +2552,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010000000000
-        actionStartIndex: 0000000002000000050000000c0000000f00000014000000
-        actionHashCodes: 2aa8e005603dd905ca51e900603dd9056ba5930176d0e601
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010000000000
+        actionStartIndex: 000000000300000005000000080000000f0000001200000017000000
+        actionHashCodes: 9c59e5012aa8e005603dd905ca51e900603dd9056ba5930176d0e601
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2565,6 +2567,12 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FIRING
         - useVariable: 1
           name: nextBeamPayload
           tooltip: 
@@ -2740,7 +2748,7 @@ MonoBehaviour:
         - OTypeAttack
         - BTypeAttack
         - RTypeAttack
-        byteData: 01000000000001
+        byteData: 000000000101000000000001
         arrayParamSizes: 010000000300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmVar
@@ -2748,8 +2756,11 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmEvent
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000000100000010000000100000000100000018000000120000000c000000270000002700000001000000010000001000000010000000010000002900000010000000270000000100000017000000120000000c0000001200000012000000120000000c00000017000000170000001700000001000000
+        paramDataType: 070000001200000001000000120000000100000010000000100000000100000018000000120000000c000000270000002700000001000000010000001000000010000000010000002900000010000000270000000100000017000000120000000c0000001200000012000000120000000c00000017000000170000001700000001000000
         paramName:
+        - logLevel
+        - text
+        - sendToUnityLog
         - storeTextPayload
         - warnOnWrongType
         - intVariable
@@ -2780,8 +2791,8 @@ MonoBehaviour:
         - 
         - 
         - everyFrame
-        paramDataPos: 000000000000000000000000010000000100000000000000010000000000000000000000010000000200000003000000020000000300000004000000000000000400000002000000050000000000000002000000010000000300000004000000050000000200000001000000020000000300000006000000
-        paramByteDataSize: 000000000100000000000000000000000100000000000000000000000000000000000000000000000100000001000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000040000000100000005000000000000000100000006000000000000000200000000000000000000000100000007000000080000000200000003000000090000000000000004000000020000000a000000000000000300000001000000040000000500000006000000020000000100000002000000030000000b000000
+        paramByteDataSize: 040000000000000001000000000000000100000000000000000000000100000000000000000000000000000000000000000000000100000001000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: Spawn O-type
       description: Spawns an O-type beam cannon after setup.
       colorIndex: 0
@@ -5342,7 +5353,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: 1
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables:
@@ -8080,13 +8091,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.CameraFadeIn
         - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - SonicBloom.Koreo.PlayMaker.SimpleMusicPlayerLoadSong
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0001
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 54303200b2cf1000
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 00000101
+        actionStartIndex: 0000000004000000090000000d000000
+        actionHashCodes: 54303200b2cf100060d31b02b2cf1000
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -8098,6 +8113,22 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 1936007272}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 1671143999}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 1237839127}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -8105,7 +8136,14 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams: []
-        fsmObjectParams: []
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: SonicBloom.Koreo.Koreography
+          value: {fileID: 11400000, guid: 75d8feede35e5034b8df60b9807633d0, type: 2}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -8116,7 +8154,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 2.5
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -8130,6 +8174,24 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams:
@@ -8143,12 +8205,12 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 000000
+        byteData: 0000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 190000000f00000017000000010000001400000011000000110000000100000001000000
+        paramDataType: 190000000f00000017000000010000001400000011000000110000000100000001000000140000001800000011000000100000001400000011000000110000000100000001000000
         paramName:
         - color
         - time
@@ -8159,8 +8221,17 @@ MonoBehaviour:
         - recursive
         - resetOnExit
         - everyFrame
-        paramDataPos: 000000000000000000000000000000000000000000000000010000000100000002000000
-        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000100000001000000
+        - gameObject
+        - koreography
+        - autoStart
+        - startSampleTime
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos: 000000000000000000000000000000000000000000000000010000000100000002000000010000000000000002000000000000000200000003000000040000000300000004000000
+        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000100000001000000000000000000000000000000000000000000000000000000000000000100000001000000
     - name: Count In
       description: 'Countdown for player after other objects have set up.
 
@@ -8366,7 +8437,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010101
-        actionIsOpen: 00000101
+        actionIsOpen: 01010101
         actionStartIndex: 0000000004000000080000000d000000
         actionHashCodes: 5e69bb045e69bb04b2cf100083f8e904
         unityObjectParams: []
@@ -9818,7 +9889,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101010101
-        actionIsOpen: 0000000000
+        actionIsOpen: 0100000000
         actionStartIndex: 0000000003000000060000000b0000000e000000
         actionHashCodes: 9845b3059845b30581294e04603dd90509faa102
         unityObjectParams: []
@@ -11064,8 +11135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPlayOnAwake: 0
-  koreography: {fileID: 11400000, guid: 75d8feede35e5034b8df60b9807633d0, type: 2}
-  targetKoreographer: {fileID: 1671144003}
+  koreography: {fileID: 0}
+  targetKoreographer: {fileID: 0}
 --- !u!82 &1671144002
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11326,24 +11397,24 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams: []
         fsmObjectParams:
-        - useVariable: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           typeName: SonicBloom.Koreo.Koreography
-          value: {fileID: 11400000, guid: 75d8feede35e5034b8df60b9807633d0, type: 2}
+          value: {fileID: 0}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
-        - useVariable: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 27883
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
