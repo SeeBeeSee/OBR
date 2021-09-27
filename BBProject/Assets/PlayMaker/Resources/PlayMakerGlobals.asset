@@ -167,3 +167,8 @@ MonoBehaviour:
   - R-BLOCK
   - R-HIT
   - ADDATTACK
+  - NavigateOptions
+  - NavigateQuit
+  - NavigateSongSelect
+  - NavigateStart
+  - NavigateDifficulties
