@@ -1150,6 +1150,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
     <Compile Include="Assets\Koreographer\Integrations\PlayMaker\Actions\SimpleMusicPlayerPause.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
+    <Compile Include="Assets\testKoreographyLoadFromPath.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Readme.txt" />
