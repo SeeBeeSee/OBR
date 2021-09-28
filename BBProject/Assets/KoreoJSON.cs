@@ -201,6 +201,7 @@ public class KoreoJSON : MonoBehaviour
         }
 
         k.AddTrack(newTrack);
+        k.SampleRate = 44100;
         smp.LoadSong(k,0,false);
     }
 }
