@@ -8107,7 +8107,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010000010100
-        actionIsOpen: 01000000000001
+        actionIsOpen: 01000000010001
         actionStartIndex: 0000000004000000090000000d000000140000001a0000001f000000
         actionHashCodes: 54303200b2cf100060d31b02ca51e900ca51e900b2cf100048c01101
         unityObjectParams: []
@@ -8155,7 +8155,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: KoreoTest
+          value: KoreoOverwriteTest
         fsmObjectParams:
         - useVariable: 0
           name: 

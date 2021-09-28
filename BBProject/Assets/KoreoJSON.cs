@@ -88,6 +88,18 @@ public class KoreoJSON : MonoBehaviour
         
     }
 
+    public void KoreoOverwriteTest()
+    {
+        var jKoreo = JsonUtility.ToJson(koreo, true);
+
+        Debug.Log(jKoreo);
+
+        Koreography k = ScriptableObject.CreateInstance<Koreography>();
+        JsonUtility.FromJsonOverwrite(jKoreo, k);
+
+        smp.LoadSong(k, 0, false);
+    }
+
     public void KoreoTest()
     {
         //smp = GetComponent<SimpleMusicPlayer>();
