@@ -14,15 +14,25 @@ public class MasterBeamParams : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.Log(k);
+        //Debug.Log(k.GetMusicSampleRate());
+        //Debug.Log(k.GetNumLoadedKoreography());
+        var sampleRateHack = k.GetMusicSampleRate();
         eighthNoteDuration = (float)(30f / k.GetMusicBPM());
+        Debug.Log("Getting BPM from Koreographer: " + k.GetMusicBPM());
         fsm = GetComponent<PlayMakerFSM>();
-        // HARDCODED
+
         fsm.FsmVariables.GetFsmFloat("eighthNoteDuration").Value = eighthNoteDuration;
         fsm.FsmVariables.GetFsmFloat("warningTime").Value = eighthNoteDuration * warning8ths;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void InitBeams()
     {
         
     }
