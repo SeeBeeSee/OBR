@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: Animal Land - Playtesting
+  m_EditorClassIdentifier: 
+  mSourceClip: {fileID: 8300000, guid: 25d7e526a73d41d4c8303f119b00458a, type: 3}
+  mAudioFilePath: 
+  mSampleRate: 44100
+  mIgnoreLatencyOffset: 0
+  mTempoSections:
+  - sectionName: Intro
+    startSample: 0
+    samplesPerBeat: 17640
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  - sectionName: Main
+    startSample: 27883
+    samplesPerBeat: 17640
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  mTracks:
+  - {fileID: 11400000, guid: 98a4fc1aa5e705842952902af584eccc, type: 2}
+  - {fileID: 11400000, guid: c85f9165c519c704c8f12af5c0a64c11, type: 2}

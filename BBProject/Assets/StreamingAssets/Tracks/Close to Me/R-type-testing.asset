@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: R-type-testing
+  m_EditorClassIdentifier: 
+  mSourceClip: {fileID: 8300000, guid: 78c013ecfa2f9a24084ee74a071d4329, type: 3}
+  mAudioFilePath: 
+  mSampleRate: 44100
+  mIgnoreLatencyOffset: 0
+  mTempoSections:
+  - sectionName: Intro
+    startSample: 0
+    samplesPerBeat: 22050
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  - sectionName: Base
+    startSample: 5804
+    samplesPerBeat: 21338.709677419352
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  - sectionName: Beats
+    startSample: 59114
+    samplesPerBeat: 21338.709677419352
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  mTracks:
+  - {fileID: 11400000, guid: cec40b4b4dd29e948af6cc0ffead99e6, type: 2}
