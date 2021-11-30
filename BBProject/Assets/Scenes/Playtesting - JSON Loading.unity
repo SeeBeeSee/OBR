@@ -420,7 +420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &816881177
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2481,12 +2481,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: WAITING
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: koreoEventTriggerID
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: beam-attack
+          value: 
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -8284,8 +8284,8 @@ MonoBehaviour:
         - SonicBloom.Koreo.PlayMaker.SimpleMusicPlayerLoadSong
         - HutongGames.PlayMaker.Actions.CallMethod
         - HutongGames.PlayMaker.Actions.CallMethod
+        - HutongGames.PlayMaker.Actions.CallMethod
         - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
@@ -8294,10 +8294,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010000010100
-        actionIsOpen: 01000000010001
-        actionStartIndex: 0000000004000000090000000d000000140000001a0000001f000000
-        actionHashCodes: 54303200b2cf100060d31b02ca51e900ca51e900b2cf100048c01101
+        actionEnabled: 01010000000101
+        actionIsOpen: 01000000000100
+        actionStartIndex: 0000000004000000090000000d000000140000001a00000023000000
+        actionHashCodes: 54303200b2cf100060d31b02ca51e900ca51e900ca51e900b2cf1000
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -8344,6 +8344,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: KoreoOverwriteTest
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: LoadChartFromStreaming
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -8359,6 +8365,13 @@ MonoBehaviour:
           networkSync: 0
           typeName: testKoreographyLoadFromPath
           value: {fileID: 1652469466}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: KoreoJSON
+          value: {fileID: 1652469467}
         - useVariable: 0
           name: 
           tooltip: 
@@ -8439,6 +8452,102 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 0
+          type: 4
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: This Time
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 4
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 4
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -8448,12 +8557,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 2.5
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 3.5
         fsmIntParams:
         - useVariable: 0
           name: 
@@ -8505,15 +8608,15 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        - FINISHED
-        byteData: 00000000000000000000
-        arrayParamSizes: 0100000000000000
+        byteData: 0000000000000000000000
+        arrayParamSizes: 010000000000000003000000
         arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         - HutongGames.PlayMaker.FsmVar
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 190000000f000000170000000100000014000000110000001100000001000000010000001400000018000000110000001000000018000000120000000c0000002700000027000000010000000100000018000000120000000c00000027000000010000000100000014000000110000001100000001000000010000000f0000001700000001000000
+        paramDataType: 190000000f000000170000000100000014000000110000001100000001000000010000001400000018000000110000001000000018000000120000000c0000002700000027000000010000000100000018000000120000000c00000027000000010000000100000018000000120000000c0000002700000027000000270000002700000001000000010000001400000011000000110000000100000001000000
         paramName:
         - color
         - time
@@ -8541,16 +8644,22 @@ MonoBehaviour:
         - storeResult
         - everyFrame
         - manualUI
+        - behaviour
+        - methodName
+        - parameters
+        - 
+        - 
+        - 
+        - storeResult
+        - everyFrame
+        - manualUI
         - gameObject
         - activate
         - recursive
         - resetOnExit
         - everyFrame
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000010000000200000001000000000000000200000000000000010000000000000000000000000000000100000003000000040000000200000001000000010000000200000005000000060000000200000003000000040000000700000008000000010000000100000009000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000000000000100000001000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000000000000000000000000000100000001000000020000000100000000000000020000000000000001000000000000000000000000000000010000000300000004000000020000000100000001000000020000000500000006000000030000000200000002000000030000000400000005000000060000000700000008000000020000000300000004000000090000000a000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000100000001000000
     - name: Count In
       description: 'Countdown for player after other objects have set up.
 
@@ -11539,10 +11648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5e90c20f70c884a837ea311af5de8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 25d7e526a73d41d4c8303f119b00458a, type: 3}
-  koreo: {fileID: 11400000, guid: 75d8feede35e5034b8df60b9807633d0, type: 2}
-  track: {fileID: 11400000, guid: 98a4fc1aa5e705842952902af584eccc, type: 2}
-  smp: {fileID: 1671144001}
+  testdirectory: 
+  testtrack: 
+  testaudiofile: 
 --- !u!1 &1671143999
 GameObject:
   m_ObjectHideFlags: 0
@@ -12500,7 +12608,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: radial_beam
+          value: This Time -- Main -- Normal
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -15011,7 +15119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1987767990
 RectTransform:
   m_ObjectHideFlags: 0

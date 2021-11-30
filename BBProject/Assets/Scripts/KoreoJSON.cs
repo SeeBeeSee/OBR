@@ -5,7 +5,7 @@ using System;
 using UnityEngine;
 using SonicBloom.Koreo;
 using SonicBloom.Koreo.Players;
-
+using HutongGames.PlayMaker;
 
 /*
  * KOREOGRAPHY BITS
@@ -68,13 +68,25 @@ public class KoreoTrackBits
 //
 //
 
+[Serializable]
+public class ChartData
+{
+    public string track_title;
+    public string track_artist;
+    public string track;
+}
+
 public class KoreoJSON : MonoBehaviour
 {
-    public AudioClip clip;
-    public Koreography koreo;
-    public KoreographyTrack track;
+    public string testdirectory;
+    public string testtrack;
+    public string testaudiofile;
 
-    public SimpleMusicPlayer smp;
+    AudioClip clip;
+    Koreography koreo;
+    KoreographyTrack track;
+
+    SimpleMusicPlayer smp;
 
     // Start is called before the first frame update
     void Start()
@@ -88,16 +100,67 @@ public class KoreoJSON : MonoBehaviour
         
     }
 
+    public void LoadChartFromStreaming(string directory, string track, string audiofile)
+    {
+        // Find valid directory that matches string
+
+        var chartDirectory = Application.dataPath + "/StreamingAssets/Tracks/" + directory;
+
+        Debug.Log(chartDirectory);
+
+        ChartData chartdata;
+
+        if (Directory.Exists(chartDirectory))
+        {
+            Debug.Log("Matching chart directory found");
+            foreach (string s in Directory.GetFiles(chartDirectory))
+            {
+                Debug.Log(s);
+                // Find and parse chart data
+                if (s == chartDirectory + "\\chart-data.json")
+                {
+                    chartdata = JsonUtility.FromJson<ChartData>(File.ReadAllText(s));
+                    Debug.Log(chartdata.track);
+                    break;
+                }
+            }
+        }
+
+        else
+        {
+            Debug.LogError("Directory not found: " + chartDirectory);
+        }
+        
+        // Validate files (koreography, difficulty, audio file)
+
+        // Load koreography from json to Koreography object
+        
+        // Load 
+    }
+
+
     public void KoreoOverwriteTest()
     {
+        // create json file
         var jKoreo = JsonUtility.ToJson(koreo, true);
 
         Debug.Log(jKoreo);
 
+        // turn json to koreography chart
         Koreography k = ScriptableObject.CreateInstance<Koreography>();
         JsonUtility.FromJsonOverwrite(jKoreo, k);
 
+        // load the chart
         smp.LoadSong(k, 0, false);
+
+        // pull event trigger ID from loaded koreography
+        var koreoTracks = k.Tracks;
+        //foreach (KoreographyTrackBase ktb in koreoTracks) Debug.Log(ktb.EventID);
+
+        var eventID = koreoTracks[0].EventID;
+
+        // Set the event trigger global var
+        FsmVariables.GlobalVariables.FindFsmString("koreoEventTriggerID").Value = eventID;
     }
 
     public void KoreoTest()
