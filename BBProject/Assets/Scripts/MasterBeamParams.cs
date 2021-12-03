@@ -18,6 +18,11 @@ public class MasterBeamParams : MonoBehaviour
         //Debug.Log(k.GetMusicSampleRate());
         //Debug.Log(k.GetNumLoadedKoreography());
         //var sampleRateHack = k.GetMusicSampleRate();
+        
+    }
+
+    public void SetUpParams()
+    {
         eighthNoteDuration = (float)(30f / k.GetMusicBPM());
         Debug.Log("Getting BPM from Koreographer: " + k.GetMusicBPM());
         fsm = GetComponent<PlayMakerFSM>();
