@@ -6920,7 +6920,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: EditorKoreoImport
+          value: LoadChartJSONs
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -10264,9 +10264,9 @@ MonoBehaviour:
   koreoExportEditor: {fileID: 0}
   koreoTrackExportEditor: {fileID: 0}
   koreoExportLocationInSA: This Time
-  testdirectory: 
-  testtrack: 
-  testaudiofile: 
+  testdirectory: This Time
+  testtrack: This Time -- Main -- Normal
+  testaudiofile: Kayzo - This Time
   koreo: {fileID: 11400000, guid: bc2f7a505fcaab84aa98a1c457c3bd7c, type: 2}
   smp: {fileID: 1671144001}
 --- !u!1 &1671143999

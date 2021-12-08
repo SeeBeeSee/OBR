@@ -114,6 +114,117 @@ public class KoreoJSON : MonoBehaviour
         File.WriteAllText(path + koreoTrackExportEditor.name + ".json", koreoTrackJSON);
     }
 
+    /// <summary>
+    /// Loads Koreography and KoreographyTracks from JSON files.
+    /// No parameters are passed, as the locations/filenames are meant to be retrieved
+    /// from global variables.
+    /// 
+    /// Note: locations/filenames are hard-coded for the sake of testing until 
+    /// song selection is complete.
+    /// </summary>
+    public void LoadChartJSONs()
+    {
+        // Load the base Koreography file from the StreamingAssets/Tracks folder
+
+        // TODO: change location to persistentDataPath so updates won't require players
+        // to keep moving custom tracks to new build locations
+        var koreoJSON = File.ReadAllText(
+            Application.dataPath + 
+            "/StreamingAssets/Tracks/" + 
+            testdirectory + 
+            "/" + 
+            testdirectory + ".json"
+        );
+
+        // Convert to Koreography instance
+        Koreography koreography = ScriptableObject.CreateInstance<Koreography>();
+        JsonUtility.FromJsonOverwrite(koreoJSON, koreography);
+
+        // Load the specific KoreographyTrack file from the StreamingAssets/Tracks folder
+
+        // TODO: change location to a subfolder within the directory, so different 
+        // difficulties are separated and more easily located
+        var koreoTrackJSON = File.ReadAllText(
+            Application.dataPath + 
+            "/StreamingAssets/Tracks/" + 
+            testdirectory + 
+            "/" + 
+            testtrack + 
+            ".json"
+        );
+
+        // Convert to KoreographyTrack instance
+        KoreographyTrack track = ScriptableObject.CreateInstance<KoreographyTrack>();
+        JsonUtility.FromJsonOverwrite(koreoTrackJSON, track);
+
+        // Clear all track references (if any) from the new Koreography
+        var baseTrackCount = koreography.Tracks.Count;
+        for (int i = 0; i < baseTrackCount; i++) koreography.RemoveTrack(koreography.Tracks[0]);
+
+        // Add the current KoreographyTrack to the Koreography
+
+        // TODO: expand this to add controls track, as well (for ending/controlling playback),
+        // game event track should always be first
+        koreography.AddTrack(track);
+
+        // Save Koreography to internal variable for reference while loading audio,
+        // and load the Koreography var
+        koreo = koreography;
+        Koreographer.Instance.LoadKoreography(koreo);
+
+        // Pull event trigger ID from loaded koreography and set event trigger global var
+        var koreoTracks = koreo.Tracks;
+        var eventID = koreoTracks[0].EventID;
+        FsmVariables.GlobalVariables.FindFsmString("koreoEventTriggerID").Value = eventID;
+
+        // Load the audio file associated with this chart
+        //LoadKoreographyAudio("Kayzo - This Time.wav");
+        LoadKoreographyAudio(testaudiofile + ".wav");
+    }
+
+    void LoadKoreographyAudio(string songName)
+    {
+        var path = "file://" + Application.dataPath + "/StreamingAssets/Tracks/" + testdirectory + "/";
+        //Debug.Log(path + songName);
+        StartCoroutine(LoadAudioClip(path, songName));
+    }
+
+    IEnumerator LoadAudioClip(string path, string songName)
+    {
+        // Fetch audio file from path
+        WWW request = GetAudioFromFile(path, songName);
+        yield return request;
+
+        // Load audio clip retrieved from request (no MP3s)
+        AudioClip clip = request.GetAudioClip();
+        Debug.Log(clip.length);
+        AudioSource koreoAudioSource = smp.transform.GetComponent<AudioSource>();
+        clip.name = "CLIP";
+
+        // Set audio clip
+        koreoAudioSource.clip = clip;
+        koreo.SourceClip = clip;
+        koreo.SampleRate = 44100;
+
+        // Load the audio into the SimpleMusicPlayer, but don't play yet        
+        smp.LoadSong(koreo, 0, false);
+
+        // Debugging
+
+        //Debug.Log(smp.GetCurrentClipName());
+        //Debug.Log(smp.GetTotalSampleTimeForClip(smp.GetCurrentClipName()));
+        //Debug.Log(Koreographer.Instance.GetMusicBeatLength());
+        //Debug.Log(Koreographer.Instance.GetMusicSampleRate());
+        //Debug.Log("tempo: " + Koreographer.Instance.GetMusicBPM());
+    }
+
+    WWW GetAudioFromFile(string path, string filename)
+    {
+        string load = string.Format(path + filename);
+        WWW request = new WWW(load);
+        return request;
+    }
+
     public void EditorKoreoImport()
     {
         // get base JSON file
@@ -148,15 +259,7 @@ public class KoreoJSON : MonoBehaviour
         //smp.LoadSong(k, 0, false);
         koreo = k;
         Koreographer.Instance.LoadKoreography(koreo);
-        
 
-
-        //Debug.Log(k.CheckTempoSectionListIntegrity());
-        //for (int i=0; i<k.GetNumTempoSections(); i++)
-        //{
-        //    Debug.Log(k.GetTempoSectionAtIndex(i).SectionName);
-        //}
-        //Debug.Log(Koreographer.Instance.GetKoreographyAtIndex(0).CheckTempoSectionListIntegrity());
 
         // pull event trigger ID from loaded koreography
         var koreoTracks = k.Tracks;
@@ -168,49 +271,6 @@ public class KoreoJSON : MonoBehaviour
         FsmVariables.GlobalVariables.FindFsmString("koreoEventTriggerID").Value = eventID;
 
         LoadKoreographyAudio("Kayzo - This Time.wav");
-    }
-
-    void LoadKoreographyAudio(string songName)
-    {
-        var path = "file://" + Application.dataPath + "/StreamingAssets/Tracks/This Time/";
-        Debug.Log(path);
-        StartCoroutine(LoadAudioClip(path, songName));
-    }
-
-    IEnumerator LoadAudioClip(string path, string songName)
-    {
-        WWW request = GetAudioFromFile(path, songName);
-        yield return request;
-
-        AudioClip clip = request.GetAudioClip();
-        AudioSource koreoAudioSource = smp.transform.GetComponent<AudioSource>();
-        clip.name = "CLIP";
-
-        // Set audio clip
-        koreoAudioSource.clip = clip;
-        koreo.SourceClip = clip;
-        koreo.SampleRate = 44100;
-        
-        //Debug.Log(koreo.GetMusicBPM());
-
-        
-        smp.LoadSong(koreo, 0, false);
-        Debug.Log(smp.GetCurrentClipName());
-        Debug.Log(smp.GetTotalSampleTimeForClip(smp.GetCurrentClipName()));
-
-
-        Debug.Log(Koreographer.Instance.GetMusicBeatLength());
-        Debug.Log(Koreographer.Instance.GetMusicSampleRate());
-        Debug.Log("tempo: " + Koreographer.Instance.GetMusicBPM());
-
-        //smp.Play();
-    }
-
-    WWW GetAudioFromFile(string path, string filename)
-    {
-        string load = string.Format(path + filename);
-        WWW request = new WWW(load);
-        return request;
     }
 
 
