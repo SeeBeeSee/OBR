@@ -1039,6 +1039,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Camera\CutToCamera.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutBeginArea.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\RandomBool.cs" />
+    <Compile Include="Assets\Scripts\TestAudioLoader.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Rect\SetRectValue.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Mesh\GetVertexPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\SetAnimatorPlayBackSpeed.cs" />
@@ -1153,7 +1154,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
     <Compile Include="Assets\Koreographer\Integrations\PlayMaker\Actions\SimpleMusicPlayerPause.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
-    <Compile Include="Assets\Scripts\TestAudioLoader.cs" />
+    <Compile Include="Assets\ScoreManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Readme.txt" />

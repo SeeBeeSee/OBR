@@ -58,6 +58,11 @@ public class KoreoJSON : MonoBehaviour
         Debug.Log("Event!");
     }
 
+    public void EditorTestNoLoad()
+    {
+        smp.LoadSong(koreoExportEditor, 0, false);
+    }
+
     public void LoadChartFromStreaming(string directory, string track, string audiofile)
     {
         // Find valid directory that matches string

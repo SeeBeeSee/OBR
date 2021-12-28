@@ -115,10 +115,10 @@ MonoBehaviour:
       value: L
     - useVariable: 1
       name: koreoEventTriggerID
-      tooltip: 
+      tooltip: ID that triggers beam spawns.
       showInInspector: 0
       networkSync: 0
-      value: 
+      value: beam-attack
     vector2Variables: []
     vector3Variables:
     - useVariable: 1

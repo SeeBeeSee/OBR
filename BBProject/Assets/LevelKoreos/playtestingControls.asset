@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: playtestingControls
   m_EditorClassIdentifier: 
-  mEventID: playtesting-controls
+  mEventID: chart-controls
   mEventList:
-  - mStartSample: 2074123
-    mEndSample: 2074123
+  - mStartSample: 151363
+    mEndSample: 151363
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 
