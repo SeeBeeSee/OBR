@@ -119,6 +119,18 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: beam-attack
+    - useVariable: 1
+      name: chartName
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: a
+    - useVariable: 1
+      name: chartDiff
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: d
     vector2Variables: []
     vector3Variables:
     - useVariable: 1
@@ -144,7 +156,7 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   events:
   - dashEvent
   - SongSelect

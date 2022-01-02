@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using UnityEngine;
+using System.Linq;
 
 [Serializable]
 public class ChartScores
@@ -14,7 +15,8 @@ public class ChartScores
 public class SessionScore
 {
     public float accuracy;
-    public string scoreDate = System.DateTime.Now.ToString();
+    //public string scoreDate = System.DateTime.Now.ToString();
+    public string scoreDate;
 }
 
 public class ScoreManager : MonoBehaviour
@@ -41,10 +43,12 @@ public class ScoreManager : MonoBehaviour
     /// </summary>
     public void EvaluateScore()
     {
+        foreach (SessionScore s in ReadScoresChartDiff()) Debug.Log(s.accuracy + " " + s.scoreDate);
+
         bool checkScoreTop10 = CheckNewHighScore();
 
-        if (checkScoreTop10)
-            WriteNewScoreChartDiff();
+        //if (checkScoreTop10)
+        //    WriteNewScoreChartDiff();
         // Does nothing if score doesn't qualify.
     }
 
@@ -54,9 +58,23 @@ public class ScoreManager : MonoBehaviour
     /// </summary>
     /// <returns>Returns a list of up to 10 floats, if any scores are saved.
     /// Otherwise, returns an empty list of floats.</returns>
-    public List<float> ReadScoresChartDiff()
+    public List<SessionScore> ReadScoresChartDiff()
     {
-        List<float> scores = new List<float>();
+        List<SessionScore> scores = new List<SessionScore>();
+
+        // Load the score file
+        string loadedScoreJSON = LoadScoreChartJSON();
+
+        // Convert to a ChartScores object for easy manipulation
+        ChartScores cs = JsonUtility.FromJson<ChartScores>(loadedScoreJSON);
+
+        foreach (SessionScore ses in cs.scores)
+        {
+            //Debug.Log(ses.accuracy);
+            scores.Add(ses);
+        }
+
+        scores = scores.OrderBy(s => s.accuracy).ToList();
 
         return scores;
     }
@@ -82,9 +100,9 @@ public class ScoreManager : MonoBehaviour
         var top10scores = ReadScoresChartDiff();
         if (top10scores.Count > 0)
         {
-            foreach (float score in top10scores)
+            foreach (SessionScore sesScore in top10scores)
             {
-                if (currentEvalScore > score)
+                if (currentEvalScore > sesScore.accuracy)
                 {
                     scoreQualifiesTop10 = true;
                     break;
@@ -128,7 +146,9 @@ public class ScoreManager : MonoBehaviour
             Debug.Log("New score json: " + newJson);
             File.WriteAllText(currentPath + "/scores.json", newJson);
         }
-        Debug.Log(Directory.GetFiles(currentPath).Length);
+        //Debug.Log(Directory.GetFiles(currentPath).Length);
+
+        loadedChartScores = File.ReadAllText(currentPath + "/scores.json");
 
         return loadedChartScores;
     }
