@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: chart-controls
   mEventList:
-  - mStartSample: 151363
-    mEndSample: 151363
+  - mStartSample: 2003563
+    mEndSample: 2003563
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 
