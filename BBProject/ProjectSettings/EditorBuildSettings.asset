@@ -20,7 +20,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Playtesting - old.unity
     guid: 0fae16c85ceba3d46b32055326fec041
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+  - enabled: 0
+    path: Assets/Scenes/MainMenu_b.unity
     guid: 988152410c886af439dd09606c6538b9
+  - enabled: 1
+    path: Assets/Scenes/MainMenu_E.unity
+    guid: e92fcef63656f8f4c87543864a7d6285
+  - enabled: 1
+    path: Assets/Scenes/Playtesting - FUCK_JSON.unity
+    guid: 90052456a4787e14ba5b982af42687d2
   m_configObjects: {}

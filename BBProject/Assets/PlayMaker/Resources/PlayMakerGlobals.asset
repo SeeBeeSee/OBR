@@ -190,3 +190,7 @@ MonoBehaviour:
   - NavigateSongSelect
   - NavigateStart
   - NavigateDifficulties
+  - send away
+  - select
+  - return
+  - deselect

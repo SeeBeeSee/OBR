@@ -296,7 +296,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Animation\BlendAnimation.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollRectSetVertical.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\BaseActions\TweenPropertyBase.cs" />
-    <Compile Include="Assets\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\IntChanged.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformGetAnchorMax.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiImageSetRaycastTarget.cs" />
@@ -1155,16 +1155,37 @@
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
     <Compile Include="Assets\Koreographer\Integrations\PlayMaker\Actions\SimpleMusicPlayerPause.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuNavigation.cs" />
+    <Compile Include="Assets\Scripts\SelectedSongHolder.cs" />
+    <Compile Include="Assets\LoadKoreoFromHolder.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\PlayMaker\Readme.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\PlayMaker\Templates\Readme.txt" />
      <None Include="Assets\Koreographer\ReadMe.txt" />
      <None Include="Assets\PlayMaker\ConditionalExpression.dll" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />
      <None Include="Assets\PlayMaker\Actions\MathExpression\Mathos\MathosLicense.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\PlayMaker\Actions\Tween\EasingFunctionLicense.txt" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\PlayMaker\Actions\Tween\Readme.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\2020.1.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -1725,6 +1746,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
